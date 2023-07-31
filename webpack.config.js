@@ -9,36 +9,44 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve('dist'),
-        publicPath: '/'
+        publicPath: '/',
     },
     module: {
         rules: [
             {
                 test: /\.(js|tsx|ts)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
+                use: 'babel-loader',
             },
             {
                 test: /\.html$/,
-                use: 'html-loader'
+                use: 'html-loader',
             },
             /*Choose only one of the following two: if you're using
             plain CSS, use the first one, and if you're using a
             preprocessor, in this case SASS, use the second one*/
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            }
-        ]
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './public/index.html'
-        })
+            template: './public/index.html',
+        }),
     ],
     devServer: {
         host: '0.0.0.0',
@@ -50,9 +58,9 @@ module.exports = {
         //     poll: 1000
         // },
         compress: true,
-        allowedHosts: 'all'
+        allowedHosts: 'all',
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx', '.json', '.css', '.html']
-    }
+        extensions: ['.js', '.ts', '.tsx', '.json', '.css', '.html'],
+    },
 };
