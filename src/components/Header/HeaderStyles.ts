@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-import mountainsImg from './images/mountains.jpg';
+import mountainsJpg from './images/mountains.jpg';
+import mountainsWebp from './images/mountains.webp';
 
 export const StyledHeader = styled.header`
     display: flex;
     flex-direction: row;
-    background: url(${mountainsImg}) 50% center;
+    background-image: image-set(url(${mountainsWebp}), url(${mountainsJpg}));
+    // background-image: url(${mountainsJpg});
+    background-position: center;
     background-size: cover;
     height: 600px;
 
