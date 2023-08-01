@@ -9,7 +9,6 @@ export const StyledHeader = styled.header`
     // background-image: url(${mountainsJpg});
     background-position: center;
     background-size: cover;
-    height: 600px;
 
     //@media (min-width: 391px) {
     //    height: 985px;
