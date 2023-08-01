@@ -1,9 +1,9 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
-const port = process.env.PORT || 3000;
-
-module.exports = {
+module.exports = (env, argv) => ({
     mode: 'development',
     entry: './src/index.tsx',
     output: {
@@ -34,7 +34,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|webp)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -44,9 +44,13 @@ module.exports = {
         ],
     },
     plugins: [
+        new Dotenv({
+            path: `./.env.${argv.mode}`,
+        }),
         new HTMLWebpackPlugin({
             template: './public/index.html',
         }),
+        new ImageminWebpWebpackPlugin(),
     ],
     devServer: {
         host: '0.0.0.0',
@@ -63,4 +67,4 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.ts', '.tsx', '.json', '.css', '.html'],
     },
-};
+});
