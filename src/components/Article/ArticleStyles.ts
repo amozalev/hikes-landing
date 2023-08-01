@@ -9,7 +9,11 @@ export const StyledArticle = styled.article<Props>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: ${({ gap }) => (gap ? gap : 32)}px;
+    ${({ gap }) =>
+        gap &&
+        `
+    gap: ${gap}px;
+  `}
     ${({ marginTop }) =>
         marginTop &&
         `

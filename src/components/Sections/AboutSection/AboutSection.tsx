@@ -12,8 +12,8 @@ const AboutSection = () => {
             backgroundColor="#F3F5F4"
         >
             <S.StyledAboutSection>
-                <Article gap={24} marginTop={24}>
-                    <p style={{}}>
+                <Article marginTop={24}>
+                    <p>
                         Его корни уходят в один фрагмент классической латыни 45
                         года н.э., то есть более двух тысячелетий назад. Ричард
                         МакКлинток, профессор латыни из колледжа Hampden-Sydney,
@@ -21,7 +21,13 @@ const AboutSection = () => {
                         Ipsum, "consectetur"и занялся его поисками в
                         классической латинской литературе.
                     </p>
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            marginTop: '24px',
+                        }}
+                    >
                         <Button
                             title="Программа тура"
                             color="#FDFDFD"
@@ -30,7 +36,7 @@ const AboutSection = () => {
                     </div>
                     <div
                         className="image-wrapper"
-                        style={{ marginTop: '16px' }}
+                        style={{ marginTop: '40px' }}
                     >
                         <img className="image" src={houseVideoPreview} />
                     </div>
