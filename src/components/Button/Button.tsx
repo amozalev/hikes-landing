@@ -2,8 +2,14 @@ import * as S from './ButtonStyles';
 
 type Props = {
     title: string;
+    color?: string;
+    backgroundColor?: string;
 };
 
-export const Button = ({ title }: Props) => {
-    return <S.StyledButton>{title}</S.StyledButton>;
+export const Button = ({ title, color, backgroundColor }: Props) => {
+    return (
+        <S.StyledButton color={color} backgroundColor={backgroundColor}>
+            {title}
+        </S.StyledButton>
+    );
 };

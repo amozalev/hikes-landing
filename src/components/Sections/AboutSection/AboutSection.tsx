@@ -22,9 +22,16 @@ const AboutSection = () => {
                         классической латинской литературе.
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Button title="Программа тура" />
+                        <Button
+                            title="Программа тура"
+                            color="#FDFDFD"
+                            backgroundColor="#1A3E3E"
+                        />
                     </div>
-                    <div className="image-wrapper">
+                    <div
+                        className="image-wrapper"
+                        style={{ marginTop: '16px' }}
+                    >
                         <img className="image" src={houseVideoPreview} />
                     </div>
                 </Article>
