@@ -54,7 +54,7 @@ module.exports = (env, argv) => ({
     ],
     devServer: {
         host: '0.0.0.0',
-        port: port,
+        port: 3000,
         historyApiFallback: true,
         hot: true,
         // watchOptions: {
