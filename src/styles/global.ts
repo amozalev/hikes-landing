@@ -16,6 +16,6 @@ export default createGlobalStyle`
   
   html {
     font-family: 'NEXT ART', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 `;
