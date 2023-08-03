@@ -1,4 +1,5 @@
-import * as S from './AboutSectioStyles';
+import * as S from './AboutSectionStyles';
+import * as T from '../../Text/TextStyles';
 import Section from '../../Section/Section';
 import Article from '../../Article/Article';
 import { Button } from '../../Button/Button';
@@ -9,18 +10,17 @@ const AboutSection = () => {
         <Section
             description="о нашем походе"
             title="Исследуйте все горные массивы мира вместе с нами"
-            backgroundColor="#F3F5F4"
         >
             <S.StyledAboutSection>
                 <Article marginTop={24}>
-                    <p>
+                    <T.Text1>
                         Его корни уходят в один фрагмент классической латыни 45
                         года н.э., то есть более двух тысячелетий назад. Ричард
                         МакКлинток, профессор латыни из колледжа Hampden-Sydney,
                         штат Вирджиния, взял одно из самых странных слов в Lorem
                         Ipsum, "consectetur"и занялся его поисками в
                         классической латинской литературе.
-                    </p>
+                    </T.Text1>
                     <div
                         style={{
                             display: 'flex',
