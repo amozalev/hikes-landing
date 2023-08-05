@@ -6,7 +6,11 @@ type Props = {
     backgroundColor?: string;
 };
 
-export const Button = ({ title, color, backgroundColor }: Props) => {
+export const Button = ({
+    title,
+    color,
+    backgroundColor = '#fdfdfd',
+}: Props) => {
     return (
         <S.StyledButton color={color} backgroundColor={backgroundColor}>
             {title}

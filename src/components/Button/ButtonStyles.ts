@@ -8,7 +8,11 @@ type Props = {
 export const StyledButton = styled.button<Props>`
     padding: 16px 36px;
     color: ${({ color }) => color ?? '#1a3e3e'};
-    background: ${({ backgroundColor }) => backgroundColor ?? '#fdfdfd'};
+    ${({ backgroundColor }) =>
+        backgroundColor &&
+        `
+    background: ${backgroundColor}
+    `};
     font-family: Nunito Sans;
     font-size: 16px;
     font-style: normal;
