@@ -40,7 +40,7 @@ const PopularHikesSection = ({ hikes }: Props) => {
         // gutter: 100,
         // edgePadding: 10,
         // autoWidth: true,
-        viewportMax: true,
+        // viewportMax: true,
         fixedWidth: 285,
         // container: 'image-swiper',
         center: true,

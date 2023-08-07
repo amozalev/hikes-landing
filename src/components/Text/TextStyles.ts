@@ -4,13 +4,14 @@ type FontWeight = 200 | 300 | 400 | 500 | 600 | 700;
 
 interface Props {
     weight?: FontWeight;
+    color?: string;
 }
 
 export const Text = styled.span<Props>`
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: 400;
-    color: #18121e;
+    color: ${({ color }) => color || '#18121e'};
 `;
 
 export const Title1 = styled(Text)<Props>`
