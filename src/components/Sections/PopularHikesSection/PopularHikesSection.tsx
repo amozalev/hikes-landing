@@ -44,6 +44,7 @@ const PopularHikesSection = ({ hikes }: Props) => {
         viewportMax: true,
         fixedWidth: 285,
         // container: 'image-swiper',
+        center: true,
     };
 
     // const params = {
