@@ -25,7 +25,6 @@ import 'tiny-slider/dist/tiny-slider.css';
 // import '../node_modules/swiper/dist/css/swiper.css';
 
 // import Swiper from 'react-id-swiper';
-import Container from '../../Container/Container';
 // import 'swiper/css/swiper.css';
 
 type Props = {
@@ -39,7 +38,7 @@ const PopularHikesSection = ({ hikes }: Props) => {
         mouseDrag: true,
         controls: false,
         // gutter: 100,
-        edgePadding: 10,
+        // edgePadding: 10,
         // autoWidth: true,
         viewportMax: true,
         fixedWidth: 285,
@@ -69,26 +68,24 @@ const PopularHikesSection = ({ hikes }: Props) => {
             description="по версии отдыхающих"
             title="Популярные направления"
         >
-            <Container>
-                <Article marginTop={32} gap={32}>
-                    <TinySlider settings={settings}>
-                        {hikes.map(({ rating, image, title, price }, index) => (
-                            <HikeCard
-                                key={index}
-                                rating={rating}
-                                image={image}
-                                title={title}
-                                price={price}
-                            />
-                        ))}
-                    </TinySlider>
-                    <Button
-                        title="Рейтинг направлений"
-                        color="#FDFDFD"
-                        backgroundColor="#1A3E3E"
-                    />
-                </Article>
-            </Container>
+            <Article marginTop={32} gap={32}>
+                <TinySlider settings={settings}>
+                    {hikes.map(({ rating, image, title, price }, index) => (
+                        <HikeCard
+                            key={index}
+                            rating={rating}
+                            image={image}
+                            title={title}
+                            price={price}
+                        />
+                    ))}
+                </TinySlider>
+                <Button
+                    title="Рейтинг направлений"
+                    color="#FDFDFD"
+                    backgroundColor="#1A3E3E"
+                />
+            </Article>
         </Section>
     );
 };
