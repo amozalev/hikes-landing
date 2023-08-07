@@ -5,6 +5,7 @@ export const StyledHikeCard = styled.div`
     width: 285px;
     height: 400px;
     border-radius: 24px;
+    margin-right: 10px;
 
     img {
         position: absolute;
@@ -31,14 +32,14 @@ export const StyledHikeCard = styled.div`
         bottom: 0;
     }
 
-    .hike-card__title {
-        color: #fdfdfd;
-        font-family: Nunito Sans;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%; /* 21.6px */
-    }
+    //.hike-card__title {
+    //    color: #fdfdfd;
+    //    font-family: Nunito Sans;
+    //    font-size: 18px;
+    //    font-style: normal;
+    //    font-weight: 700;
+    //    line-height: 120%; /* 21.6px */
+    //}
 
     .hike-card__price {
         display: flex;

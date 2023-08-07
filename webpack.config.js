@@ -41,6 +41,11 @@ module.exports = (env, argv) => ({
                     },
                 ],
             },
+            // {
+            //     exclude: [/node_modules/(?!(swiper | dom7)/).*/, /.test.js(x)?$/],
+            //     test: /.js(x)?$/,
+            //     use: [{loader: 'babel-loader'}],
+            // }
         ],
     },
     plugins: [
@@ -54,7 +59,7 @@ module.exports = (env, argv) => ({
     ],
     devServer: {
         host: '0.0.0.0',
-        port: 3000,
+        port: 3001,
         historyApiFallback: true,
         hot: true,
         // watchOptions: {

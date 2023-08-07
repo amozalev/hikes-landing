@@ -18,4 +18,9 @@ export default createGlobalStyle`
     font-family: 'NEXT ART', sans-serif;
     overflow-x: hidden;
   }
+  
+  //TODO fix this. this is for testing
+  .tns-outer {
+    width: 100%;
+  }
 `;
