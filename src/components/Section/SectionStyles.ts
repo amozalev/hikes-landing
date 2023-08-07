@@ -7,7 +7,6 @@ type Props = {
 export const StyledSection = styled.div<Props>`
     display: flex;
     flex-direction: column;
-    padding: 50px 16px;
     font-family: Nunito Sans;
     background: ${({ backgroundColor }) => backgroundColor || '#fff'};
 
