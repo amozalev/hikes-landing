@@ -28,13 +28,13 @@ export const Title1 = styled(Text)<Props>`
     font-family: 'NEXT ART', sans-serif;
     font-size: 28px;
     font-weight: 700;
-    line-height: 28.8px;
+    line-height: 42px;
 `;
 
 export const Title2 = styled(Text)<Props>`
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 26px; /* 130% */
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28.8px;
 `;
 
 export const Title3 = styled(Text)<Props>`
@@ -46,7 +46,7 @@ export const Title3 = styled(Text)<Props>`
 
 export const Text1 = styled(Text)<Props>`
     font-size: 16px;
-    line-height: 150%; /* 24px */
+    line-height: 20px;
 `;
 
 export const Text2 = styled(Text)<Props>`

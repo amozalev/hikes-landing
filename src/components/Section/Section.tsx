@@ -1,4 +1,5 @@
 import * as S from './SectionStyles';
+import * as T from '../Text/TextStyles';
 import Container from '../Container/Container';
 
 type Props = {
@@ -18,8 +19,8 @@ const Section: React.FC<Props> = ({
         <S.StyledSection backgroundColor={backgroundColor}>
             <Container>
                 <header className="header-wrapper">
-                    <span className="description">{description}</span>
-                    <h2 className="header">{title}</h2>
+                    <T.Text1 color="#f2be22">{description}</T.Text1>
+                    <T.Title2>{title}</T.Title2>
                 </header>
                 <div className="content">{children}</div>
             </Container>

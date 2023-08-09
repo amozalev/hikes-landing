@@ -1,4 +1,5 @@
 import * as S from './ButtonStyles';
+import * as T from '../Text/TextStyles';
 
 type Props = {
     title: string;
@@ -12,8 +13,10 @@ export const Button = ({
     backgroundColor = '#fdfdfd',
 }: Props) => {
     return (
-        <S.StyledButton color={color} backgroundColor={backgroundColor}>
-            {title}
+        <S.StyledButton backgroundColor={backgroundColor}>
+            <T.Text1 color={color} weight={600}>
+                {title}
+            </T.Text1>
         </S.StyledButton>
     );
 };

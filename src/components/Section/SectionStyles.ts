@@ -14,20 +14,4 @@ export const StyledSection = styled.div<Props>`
         flex-direction: column;
         gap: 8px;
     }
-
-    .description {
-        color: #f2be22;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px; /* 125% */
-    }
-
-    .header {
-        color: #18121e;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 120%; /* 28.8px */
-    }
 `;
