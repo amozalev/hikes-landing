@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledHikeCard = styled.div`
-    position: relative;
-    width: 285px;
-    height: 400px;
-    border-radius: 24px;
-    margin-right: 10px;
+    .card {
+        position: relative;
+        width: 285px;
+        height: 400px;
+        border-radius: 24px;
+    }
 
     img {
         position: absolute;

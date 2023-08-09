@@ -12,14 +12,16 @@ export type Hike = {
 const HikeCard = ({ rating, image, title, price }: Hike) => {
     return (
         <S.StyledHikeCard>
-            <Rating rating={rating} top={36.8} right={0} zIndex={10} />
-            <img className="hike-card__image" src={image} />
-            <div className="hike-card__footer">
-                <T.Title3 color="#FDFDFD">{title}</T.Title3>
-                <div className="hike-card__price">
-                    <T.Text1 color="#FDFDFD">{price}</T.Text1>
+            <article className="card">
+                <Rating rating={rating} top={36.8} right={0} zIndex={10} />
+                <img className="hike-card__image" src={image} />
+                <div className="hike-card__footer">
+                    <T.Title3 color="#FDFDFD">{title}</T.Title3>
+                    <div className="hike-card__price">
+                        <T.Text1 color="#FDFDFD">{price}</T.Text1>
+                    </div>
                 </div>
-            </div>
+            </article>
         </S.StyledHikeCard>
     );
 };

@@ -5,8 +5,6 @@ type Props = {
 };
 
 export const StyledBlogPostCard = styled.div<Props>`
-    margin-right: 10px;
-
     .card {
         display: flex;
         flex-direction: column;

@@ -8,17 +8,10 @@ import BlogPostCard, {
 
 type Props = {
     posts: BlogPostCardType[];
+    tinySliderSettings: any;
 };
 
-const BlogSection = ({ posts }: Props) => {
-    const settings = {
-        lazyload: false,
-        nav: false,
-        mouseDrag: true,
-        controls: false,
-        fixedWidth: 285,
-        center: true,
-    };
+const BlogSection = ({ posts, tinySliderSettings }: Props) => {
 
     return (
         <Section
@@ -27,7 +20,7 @@ const BlogSection = ({ posts }: Props) => {
             backgroundColor="#F3F5F4"
         >
             <Article marginTop={32} gap={32}>
-                <TinySlider settings={settings}>
+                <TinySlider settings={tinySliderSettings}>
                     {posts.map(({ ...props }, index) => (
                         <BlogPostCard key={index} {...props} />
                     ))}

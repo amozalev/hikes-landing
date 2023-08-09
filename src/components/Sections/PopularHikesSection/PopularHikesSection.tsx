@@ -29,23 +29,10 @@ import 'tiny-slider/dist/tiny-slider.css';
 
 type Props = {
     hikes: Hike[];
+    tinySliderSettings: any;
 };
 
-const PopularHikesSection = ({ hikes }: Props) => {
-    const settings = {
-        lazyload: false,
-        nav: false,
-        mouseDrag: true,
-        controls: false,
-        // gutter: 100,
-        // edgePadding: 10,
-        // autoWidth: true,
-        // viewportMax: true,
-        fixedWidth: 285,
-        // container: 'image-swiper',
-        center: true,
-    };
-
+const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
     // const params = {
     //     // Provide Swiper class as props
     //     Swiper,
@@ -69,7 +56,7 @@ const PopularHikesSection = ({ hikes }: Props) => {
             title="Популярные направления"
         >
             <Article marginTop={32} gap={32}>
-                <TinySlider settings={settings}>
+                <TinySlider settings={tinySliderSettings}>
                     {hikes.map(({ rating, image, title, price }, index) => (
                         <HikeCard
                             key={index}

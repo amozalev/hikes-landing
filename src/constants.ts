@@ -55,3 +55,13 @@ export const POSTS: BlogPostCardType[] = [
         date: '03/06/2023',
     },
 ];
+
+export const TINY_SLIDER_SETTINGS = {
+    lazyload: false,
+    nav: false,
+    mouseDrag: true,
+    controls: false,
+    gutter: 10,
+    fixedWidth: 285,
+    center: true,
+};
