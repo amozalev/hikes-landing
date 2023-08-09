@@ -5,6 +5,7 @@ import { Button } from '../../Button/Button';
 import PhotoGallery, {
     GalleryPhotoType,
 } from '../../PhotoGallery/PhotoGallery';
+import SubscriptionForm from '../../NewsSubscriptionForm/SubscriptionForm';
 
 type Props = {
     photos: GalleryPhotoType[];
@@ -21,10 +22,11 @@ const GallerySection = ({ photos, tinySliderSettings }: Props) => {
                     ))}
                 </TinySlider>
                 <Button
-                    title="Другие материалы"
+                    title="Наш Pinterest"
                     color="#FDFDFD"
                     backgroundColor="#1A3E3E"
                 />
+                <SubscriptionForm />
             </Article>
         </Section>
     );

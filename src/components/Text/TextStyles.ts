@@ -7,6 +7,8 @@ interface Props {
     weight?: FontWeight;
     color?: string;
     lineHeight?: number;
+    marginTop?: number;
+    marginBottom?: number;
 }
 
 export const Text = styled.span<Props>`
@@ -14,6 +16,16 @@ export const Text = styled.span<Props>`
     color: ${({ color }) => color || '#18121e'};
     font-weight: ${({ weight }) => weight || 400};
     line-height: ${({ lineHeight }) => lineHeight || 20}px;
+    ${({ marginTop }) =>
+        marginTop &&
+        `
+    margin-top: ${marginTop}px
+    `};
+    ${({ marginBottom }) =>
+        marginBottom &&
+        `
+    margin-bottom: ${marginBottom}px
+    `};
 `;
 
 export const StyledLink = styled(Link)<Props>`
@@ -58,5 +70,8 @@ export const Text3 = styled(Text)<Props>`
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
+`;
+
+export const UnderlinedText3 = styled(Text3)<Props>`
     text-decoration-line: underline;
 `;
