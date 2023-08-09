@@ -3,10 +3,11 @@ import styled from 'styled-components';
 type Props = {
     color?: string;
     backgroundColor?: string;
+    large?: boolean;
 };
 
 export const StyledButton = styled.button<Props>`
-    padding: 16px 36px;
+    padding: ${({ large }) => (large ? '16px 36px' : '12px 24px')};
     ${({ backgroundColor }) =>
         backgroundColor &&
         `

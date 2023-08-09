@@ -15,7 +15,7 @@ const Header = () => {
                     </T.Title1>
                 </div>
                 <div>
-                    <Button title="Найти программу" color="#1A3E3E" />
+                    <Button title="Найти программу" color="#1A3E3E" large />
                 </div>
             </Container>
         </S.StyledHeader>
