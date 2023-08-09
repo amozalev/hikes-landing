@@ -5,13 +5,24 @@ type FontWeight = 200 | 300 | 400 | 500 | 600 | 700;
 interface Props {
     weight?: FontWeight;
     color?: string;
+    lineHeight?: number;
 }
 
 export const Text = styled.span<Props>`
     font-family: Nunito Sans;
     font-style: normal;
-    font-weight: 400;
     color: ${({ color }) => color || '#18121e'};
+    font-weight: ${({ weight }) => weight || 400};
+    line-height: ${({ lineHeight }) => lineHeight || 20}px;
+`;
+
+export const Link = styled.a<Props>`
+    font-family: Nunito Sans;
+    font-style: normal;
+    text-decoration: none;
+    color: ${({ color }) => color || '#18121e'};
+    font-weight: ${({ weight }) => weight || 400};
+    line-height: ${({ lineHeight }) => lineHeight || 20}px;
 `;
 
 export const Title1 = styled(Text)<Props>`
@@ -39,7 +50,6 @@ export const Text1 = styled(Text)<Props>`
 `;
 
 export const Text2 = styled(Text)<Props>`
-    color: #000;
     font-size: 14px;
     line-height: 20px; /* 142.857% */
 `;
