@@ -5,51 +5,12 @@ import { Button } from '../../Button/Button';
 import TinySlider from 'tiny-slider-react';
 import 'tiny-slider/dist/tiny-slider.css';
 
-// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import {
-//     Swiper,
-//     Navigation,
-//     Pagination,
-//     Scrollbar,
-//     EffectCoverflow
-// } from 'swiper/dist/js/swiper.esm.js';
-// import { Swiper, Navigation, Pagination } from 'swiper/js/swiper.esm';
-// import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom';
-// import Swiper from 'swiper';
-
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
-// import '../node_modules/swiper/dist/css/swiper.css';
-
-// import Swiper from 'react-id-swiper';
-// import 'swiper/css/swiper.css';
-
 type Props = {
     hikes: Hike[];
     tinySliderSettings: any;
 };
 
 const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
-    // const params = {
-    //     // Provide Swiper class as props
-    //     Swiper,
-    //     // Add modules you need
-    //     // modules: [Navigation, Pagination],
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         type: 'bullets',
-    //         clickable: true,
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     spaceBetween: 30,
-    // };
-
     return (
         <Section
             description="по версии отдыхающих"
