@@ -6,7 +6,14 @@ import italyImg from './assets/images/italy_post.jpg';
 import flightImg from './assets/images/flight_post.png';
 import backpackImg from './assets/images/backpack_post.png';
 import mosqueImg from './assets/images/mosque_post.png';
+import balloons from './assets/images/balloons.jpg';
+import lakeAndMountain from './assets/images/lake_and_mountain.jpg';
+import palms from './assets/images/palms.jpg';
+import photosOnMap from './assets/images/photos_and_map.jpg';
+import rainbow from './assets/images/rainbow.jpg';
+import waterfall from './assets/images/waterfall.jpg';
 import { BlogPostCardType } from './components/BlogPostCard/BlogPostCard';
+import { GalleryPhotoType } from './components/GalleryPhoto/PhotoGallery';
 
 export const HIKES: Hike[] = [
     {
@@ -54,6 +61,15 @@ export const POSTS: BlogPostCardType[] = [
         text: 'Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации. Удивительная и многообразная страна с неповторимой культурой.',
         date: '03/06/2023',
     },
+];
+
+export const PHOTOS: GalleryPhotoType[] = [
+    { image: balloons, description: 'Фестиваль воздушных шаров' },
+    { image: lakeAndMountain, description: 'Озеро в горах' },
+    { image: palms, description: 'Райский пляж' },
+    { image: photosOnMap, description: 'Прошлые и будущие путешествия' },
+    { image: rainbow, description: 'Радуга' },
+    { image: waterfall, description: 'Фантастический водопад' },
 ];
 
 export const TINY_SLIDER_SETTINGS = {

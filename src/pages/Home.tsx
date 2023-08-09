@@ -3,7 +3,8 @@ import AboutSection from '../components/Sections/AboutSection/AboutSection';
 import AdvantagesSection from '../components/Sections/AdvantagesSection/AdvantagesSection';
 import PopularHikesSection from '../components/Sections/PopularHikesSection/PopularHikesSection';
 import BlogSection from '../components/Sections/BlogSection/BlogSection';
-import { HIKES, POSTS, TINY_SLIDER_SETTINGS } from '../constants';
+import { HIKES, PHOTOS, POSTS, TINY_SLIDER_SETTINGS } from '../constants';
+import GallerySection from '../components/Sections/GallerySection/GallerySection';
 
 const HomePage = () => {
     return (
@@ -17,6 +18,10 @@ const HomePage = () => {
             />
             <BlogSection
                 posts={POSTS}
+                tinySliderSettings={TINY_SLIDER_SETTINGS}
+            />
+            <GallerySection
+                photos={PHOTOS}
                 tinySliderSettings={TINY_SLIDER_SETTINGS}
             />
         </>
