@@ -13,7 +13,6 @@ export const StyledButton = styled.button<Props>`
         `
     background: ${backgroundColor}
     `};
-    font-family: Nunito Sans;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

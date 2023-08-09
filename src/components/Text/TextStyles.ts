@@ -10,7 +10,6 @@ interface Props {
 }
 
 export const Text = styled.span<Props>`
-    font-family: Nunito Sans;
     font-style: normal;
     color: ${({ color }) => color || '#18121e'};
     font-weight: ${({ weight }) => weight || 400};
@@ -18,7 +17,6 @@ export const Text = styled.span<Props>`
 `;
 
 export const StyledLink = styled(Link)<Props>`
-    font-family: Nunito Sans;
     font-style: normal;
     text-decoration: none;
     color: ${({ color }) => color || '#18121e'};
@@ -27,9 +25,10 @@ export const StyledLink = styled(Link)<Props>`
 `;
 
 export const Title1 = styled(Text)<Props>`
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 120%; /* 28.8px */
+    font-family: 'NEXT ART', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28.8px;
 `;
 
 export const Title2 = styled(Text)<Props>`

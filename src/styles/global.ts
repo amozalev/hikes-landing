@@ -15,7 +15,7 @@ export default createGlobalStyle`
   ${normalize}
   
   html {
-    font-family: 'NEXT ART', sans-serif;
+    font-family: Nunito Sans;
     overflow-x: hidden;
   }
   

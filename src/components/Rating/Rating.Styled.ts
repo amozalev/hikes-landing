@@ -20,7 +20,6 @@ export const StyledRating = styled.div<Props>`
     align-items: center;
 
     color: #1a3e3e;
-    font-family: Nunito Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
