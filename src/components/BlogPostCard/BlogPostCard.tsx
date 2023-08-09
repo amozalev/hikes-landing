@@ -26,9 +26,9 @@ const BlogPostCard = ({ image, title, text, date }: BlogPostCardType) => {
                         <T.Text2 color={'#F2BE22'} weight={700}>
                             {date}
                         </T.Text2>
-                        <T.Link href="#" weight={700} color={'#1A3E3E'}>
+                        <T.StyledLink to="#" weight={700} color={'#1A3E3E'}>
                             Читать статью
-                        </T.Link>
+                        </T.StyledLink>
                     </div>
                 </div>
             </article>

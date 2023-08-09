@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 type FontWeight = 200 | 300 | 400 | 500 | 600 | 700;
 
@@ -16,7 +17,7 @@ export const Text = styled.span<Props>`
     line-height: ${({ lineHeight }) => lineHeight || 20}px;
 `;
 
-export const Link = styled.a<Props>`
+export const StyledLink = styled(Link)<Props>`
     font-family: Nunito Sans;
     font-style: normal;
     text-decoration: none;

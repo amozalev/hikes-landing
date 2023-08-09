@@ -27,13 +27,13 @@ export const StyledRating = styled.div<Props>`
     line-height: 18px; /* 128.571% */
 
     position: absolute;
-    ${({ zIndex }) => zIndex !== undefined && `z-index: ${zIndex};`}
+    z-index: ${({ zIndex }) => (zIndex !== undefined ? zIndex : 0)};
     ${({ top }) => top !== undefined && `top: ${top}px;`}
     ${({ right }) => right !== undefined && `right: ${right}px;`}
     ${({ bottom }) => bottom !== undefined && `bottom: ${bottom}px;`}
-    ${({ left }) => left !== undefined && `left: ${left}px;`}
-  
-  .wrapper {
+    ${({ left }) => left !== undefined && `left: ${left}px;`} 
+    
+    .wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
