@@ -50,6 +50,12 @@ export const Title2 = styled(Text)<TextProps>`
 `;
 
 export const Title3 = styled(Text)<TextProps>`
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+`;
+
+export const Title4 = styled(Text)<TextProps>`
     font-size: 18px;
     font-weight: 700;
     line-height: 20px; /* 111.111% */

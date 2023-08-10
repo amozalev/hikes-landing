@@ -27,7 +27,7 @@ const AdvantagesSection = () => {
                             <TouristsIcon />
                         </AdvantageIconCard>
                         <div className="advantage">
-                            <T.Title3>Опытный гид</T.Title3>
+                            <T.Title4>Опытный гид</T.Title4>
                             <T.Text2>
                                 Для современного мира базовый вектор развития
                                 предполагает независимые способы реализации
@@ -38,7 +38,7 @@ const AdvantagesSection = () => {
                             <ShieldIcon />
                         </AdvantageIconCard>
                         <div className="advantage">
-                            <T.Title3>Безопасный поход</T.Title3>
+                            <T.Title4>Безопасный поход</T.Title4>
                             <T.Text2>
                                 Для современного мира базовый вектор развития
                                 предполагает независимые способы реализации
@@ -49,7 +49,7 @@ const AdvantagesSection = () => {
                             <LabelIcon />
                         </AdvantageIconCard>
                         <div className="advantage">
-                            <T.Title3>Лояльные цены</T.Title3>
+                            <T.Title4>Лояльные цены</T.Title4>
                             <T.Text2>
                                 Для современного мира базовый вектор развития
                                 предполагает независимые способы реализации
