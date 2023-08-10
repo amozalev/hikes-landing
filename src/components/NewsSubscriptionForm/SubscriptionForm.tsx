@@ -1,6 +1,7 @@
 import * as S from './SubscriptionForm.Styled';
 import * as T from '../Text/TextStyles';
 import { Button } from '../Button/Button';
+import Input from '../Input/Input';
 
 const SubscriptionForm = () => {
     return (
@@ -11,10 +12,7 @@ const SubscriptionForm = () => {
             <T.Title2 marginBottom={18}>
                 Получайте полезные рассылки о путешествиях
             </T.Title2>
-            <T.Text1 color="#f2be22" weight={600} marginBottom={8}>
-                Введите e-mail адрес
-            </T.Text1>
-            <input type="text" style={{ marginBottom: '16px' }} />
+            <Input label="Введите адрес" marginBottom={16} />
             <div>
                 <Button
                     title="Подписаться на новости"
