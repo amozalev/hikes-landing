@@ -73,6 +73,14 @@ export const PHOTOS: GalleryPhotoType[] = [
     { image: waterfall, description: 'Фантастический водопад' },
 ];
 
+export const BURGER_MENU_LINKS1: NavLinkType[] = [
+    { text: 'Про гида' },
+    { text: 'Программа тура' },
+    { text: 'Стоимость' },
+    { text: 'Блог' },
+    { text: 'Контакты' },
+];
+
 export const FOOTER_LINKS1: NavLinkType[] = [
     { text: 'Прогулки в горы летом' },
     { text: 'Зимние походы в горы' },
