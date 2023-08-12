@@ -7,7 +7,7 @@ import { Button } from '../Button/Button';
 const Header = () => {
     return (
         <S.StyledHeader>
-            <Container>
+            <Container paddingTop={20}>
                 <Menu />
                 <div className="title">
                     <T.Title1 color="#fdfdfd">
