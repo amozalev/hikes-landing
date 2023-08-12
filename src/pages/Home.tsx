@@ -5,6 +5,8 @@ import PopularHikesSection from '../components/Sections/PopularHikesSection/Popu
 import BlogSection from '../components/Sections/BlogSection/BlogSection';
 import { HIKES, PHOTOS, POSTS, TINY_SLIDER_SETTINGS } from '../constants';
 import GallerySection from '../components/Sections/GallerySection/GallerySection';
+import FooterSection from '../components/Sections/FooterSection/FooterSection';
+import CompanyInfoSection from '../components/Sections/CompanyInfoSection/CompanyInfoSection';
 
 const HomePage = () => {
     return (
@@ -24,6 +26,8 @@ const HomePage = () => {
                 photos={PHOTOS}
                 tinySliderSettings={TINY_SLIDER_SETTINGS}
             />
+            <FooterSection />
+            <CompanyInfoSection />
         </>
     );
 };

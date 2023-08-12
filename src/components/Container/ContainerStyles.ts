@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export type ContainerProps = {
+    gap?: number;
     paddingTop?: number;
     paddingRight?: number;
     paddingBottom?: number;
@@ -19,6 +20,11 @@ export const StyledContainer = styled.div.attrs({
     padding-right: ${({ paddingRight }) => paddingRight ?? '16'}px;
     padding-bottom: ${({ paddingBottom }) => paddingBottom ?? '50'}px;
     padding-left: ${({ paddingLeft }) => paddingLeft ?? '16'}px;
+    ${({ gap }) =>
+        gap &&
+        `
+  gap: ${gap}px;
+  `};
 
     //@media (min-width: 391px) {
     //}

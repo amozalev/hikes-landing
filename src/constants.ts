@@ -14,6 +14,7 @@ import rainbow from './assets/images/rainbow.jpg';
 import waterfall from './assets/images/waterfall.jpg';
 import { BlogPostCardType } from './components/BlogPostCard/BlogPostCard';
 import { GalleryPhotoType } from './components/GalleryPhoto/PhotoGallery';
+import { NavLinkType } from './components/NavLink/NavLink';
 
 export const HIKES: Hike[] = [
     {
@@ -70,6 +71,22 @@ export const PHOTOS: GalleryPhotoType[] = [
     { image: photosOnMap, description: 'Прошлые и будущие путешествия' },
     { image: rainbow, description: 'Радуга' },
     { image: waterfall, description: 'Фантастический водопад' },
+];
+
+export const FOOTER_LINKS1: NavLinkType[] = [
+    { text: 'Прогулки в горы летом' },
+    { text: 'Зимние походы в горы' },
+    { text: 'Посещение храмов в горах' },
+    { text: 'Экстремальные виды туризма' },
+    { text: 'Походы в джунглях Амазонииы' },
+    { text: 'Поездка в Африку' },
+];
+
+export const FOOTER_LINKS2: NavLinkType[] = [
+    { text: 'Как собрать в долгий поход?' },
+    { text: 'Жизненно важные предметы для похода' },
+    { text: 'Медицинская страховка, гарантии безопасности' },
+    { text: 'Если вы врач - загляните сюда' },
 ];
 
 export const TINY_SLIDER_SETTINGS = {

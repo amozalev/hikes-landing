@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 type FontWeight = 200 | 300 | 400 | 500 | 600 | 700;
 
 export interface TextProps {
+    fontSize?: number;
     weight?: FontWeight;
     color?: string;
+    underline?: boolean;
     lineHeight?: number;
     marginTop?: number;
     marginBottom?: number;
@@ -34,6 +36,22 @@ export const StyledLink = styled(Link)<TextProps>`
     color: ${({ color }) => color || '#18121e'};
     font-weight: ${({ weight }) => weight || 400};
     line-height: ${({ lineHeight }) => lineHeight || 20}px;
+    ${({ fontSize }) =>
+        fontSize &&
+        `
+    font-size: ${fontSize}px;
+    `};
+    ${({ underline }) =>
+        underline &&
+        `
+    text-decoration-line: underline;
+    `};
+    ${({ underline, color }) =>
+        underline &&
+        color &&
+        `
+    text-decoration-color: ${color};
+    `};
 `;
 
 export const Title1 = styled(Text)<TextProps>`
@@ -74,7 +92,7 @@ export const Text2 = styled(Text)<TextProps>`
 
 export const Text3 = styled(Text)<TextProps>`
     font-size: 14px;
-    font-weight: 600;
+    font-weight: ${({ weight }) => weight || 600};
     line-height: 18px;
 `;
 

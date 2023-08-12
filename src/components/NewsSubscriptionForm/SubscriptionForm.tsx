@@ -22,13 +22,13 @@ const SubscriptionForm = () => {
             </div>
             <T.Text3 marginTop={24}>
                 подписываясь на новости, вы автоматически соглашаетесь с{' '}
-                <T.UnderlinedText3>
+                <T.StyledLink to="./" underline>
                     условиями обработки персональных данных
-                </T.UnderlinedText3>{' '}
+                </T.StyledLink>{' '}
                 и{' '}
-                <T.UnderlinedText3>
+                <T.StyledLink to="./" underline>
                     правилами рекламных рассылок
-                </T.UnderlinedText3>
+                </T.StyledLink>
             </T.Text3>
         </S.StyledSubscriptionForm>
     );
