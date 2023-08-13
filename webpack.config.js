@@ -22,9 +22,6 @@ module.exports = (env, argv) => ({
                 test: /\.html$/,
                 use: 'html-loader',
             },
-            /*Choose only one of the following two: if you're using
-            plain CSS, use the first one, and if you're using a
-            preprocessor, in this case SASS, use the second one*/
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
@@ -41,11 +38,6 @@ module.exports = (env, argv) => ({
                     },
                 ],
             },
-            // {
-            //     exclude: [/node_modules/(?!(swiper | dom7)/).*/, /.test.js(x)?$/],
-            //     test: /.js(x)?$/,
-            //     use: [{loader: 'babel-loader'}],
-            // }
         ],
     },
     plugins: [
