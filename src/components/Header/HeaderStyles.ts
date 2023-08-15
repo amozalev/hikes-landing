@@ -9,6 +9,12 @@ export const StyledHeader = styled.header`
     background-position: center;
     background-size: cover;
 
+    .menu-wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 44px;
+    }
+
     .title {
         display: flex;
         margin: 234px 13px 32px 0;

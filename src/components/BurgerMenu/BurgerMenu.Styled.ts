@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
-export const StyledMenu = styled.div`
+export const StyledBurgerMenu = styled.div`
     display: flex;
-    justify-content: space-between;
-    height: 44px;
 
     .menu {
         position: fixed;
@@ -31,6 +29,7 @@ export const StyledMenu = styled.div`
         padding: 5px;
     }
 
-    //@media (min-width: 390px) {
-    //}
+    @media (min-width: 850px) {
+        display: none;
+    }
 `;

@@ -4,9 +4,10 @@ import { useState } from 'react';
 
 export type NavLinkType = {
     text: string;
+    showArrow?: boolean;
 };
 
-const NavLink = ({ text }: NavLinkType) => {
+const NavLink = ({ text, showArrow = true }: NavLinkType) => {
     const [hovered, setHovered] = useState<boolean>(false);
 
     const color = hovered ? '#F2BE22' : '#FDFDFD';
@@ -30,7 +31,7 @@ const NavLink = ({ text }: NavLinkType) => {
             lineHeight={18}
             underline={hovered}
         >
-            <RightArrowIcon color={color} />
+            {showArrow ? <RightArrowIcon color={color} /> : null}
             {text}
         </S.StyledNavLink>
     );

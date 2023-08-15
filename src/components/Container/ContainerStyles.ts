@@ -14,7 +14,7 @@ export const StyledContainer = styled.div.attrs({
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1180px;
     margin: 0 auto;
     padding-top: ${({ paddingTop }) => paddingTop ?? '50'}px;
     padding-right: ${({ paddingRight }) => paddingRight ?? '16'}px;

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledNavigation = styled.nav`
+type Props = {
+    column?: boolean;
+};
+
+export const StyledNavigation = styled.nav<Props>`
     display: flex;
-    flex-direction: column;
+    ${({ column }) => `
+    flex-direction: ${column ? 'column' : 'row'};
+    `}
     gap: 16px;
 `;
