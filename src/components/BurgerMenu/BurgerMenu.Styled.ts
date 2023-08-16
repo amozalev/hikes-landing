@@ -1,26 +1,28 @@
 import styled from 'styled-components';
 
 export const StyledBurgerMenu = styled.div`
-    display: flex;
-
     .menu {
+        display: flex;
         position: fixed;
-        top: 0;
-        left: 100vw;
         width: 100vw;
         height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(100vw);
+        transition: transform 250ms linear;
+    }
+
+    .menu[data-open='true'] {
+        transform: translateX(0);
+    }
+
+    .menu-inner {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
         padding: 16px;
         background: #1a3e3e;
-
-        z-index: 1000;
-        transition: transform 250ms linear;
-    }
-
-    .open {
-        transform: translateX(-100vw);
     }
 
     .icon-wrapper {

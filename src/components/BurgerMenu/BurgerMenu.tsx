@@ -12,14 +12,16 @@ const BurgerMenu = () => {
     return (
         <S.StyledBurgerMenu>
             <IconButton icon={MenuIcon} onClick={() => setOpen(true)} />
-            <div className={`menu${open ? ' open' : ''}`}>
-                <div className="icon-wrapper">
-                    <IconButton
-                        icon={CloseIcon}
-                        onClick={() => setOpen(false)}
-                    />
+            <div className="menu" data-open={open}>
+                <div className="menu-inner">
+                    <div className="icon-wrapper">
+                        <IconButton
+                            icon={CloseIcon}
+                            onClick={() => setOpen(false)}
+                        />
+                    </div>
+                    <Navigation links={MENU_LINKS} />
                 </div>
-                <Navigation links={MENU_LINKS} />
             </div>
         </S.StyledBurgerMenu>
     );
