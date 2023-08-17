@@ -26,6 +26,8 @@ export const StyledContainer = styled.div.attrs({
   gap: ${gap}px;
   `};
 
-    //@media (min-width: 391px) {
-    //}
+    @media (min-width: 1180px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 `;
