@@ -38,6 +38,10 @@ module.exports = (env, argv) => ({
                     },
                 ],
             },
+            {
+                test: /\.svg$/,
+                type: 'asset/resource',
+            },
         ],
     },
     plugins: [

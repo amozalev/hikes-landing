@@ -1,21 +1,25 @@
 import * as S from './Input.Styled';
 
 type Props = {
-    label: string;
+    label?: string;
+    placeholder?: string;
+    type?: string;
     width?: number;
     marginTop?: number;
     marginBottom?: number;
 };
 
-const Input = ({ label, width, ...rest }: Props) => {
+const Input = ({
+    label,
+    placeholder,
+    type = 'text',
+    width,
+    ...rest
+}: Props) => {
     return (
         <S.StyledInput {...rest}>
-            <S.Label width={width}>{label}</S.Label>
-            <input
-                className="input"
-                type="text"
-                placeholder="name@domain.com"
-            />
+            {label ? <S.Label width={width}>{label}</S.Label> : null}
+            <input className="input" type={type} placeholder={placeholder} />
         </S.StyledInput>
     );
 };

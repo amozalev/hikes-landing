@@ -14,6 +14,7 @@ export const StyledButton = styled.button<Props>`
     background: ${backgroundColor}
     `};
     letter-spacing: 0.192px;
+    white-space: nowrap;
     border: none;
     border-radius: 4px;
 `;
