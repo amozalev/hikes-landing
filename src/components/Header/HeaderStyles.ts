@@ -20,7 +20,21 @@ export const StyledHeader = styled.header`
         margin: 234px 13px 32px 0;
     }
 
-    //@media (min-width: 391px) {
-    //    height: 985px;
-    //}
+    .hike-search-form {
+        display: none;
+    }
+
+    .hike-search-btn {
+        display: flex;
+    }
+
+    @media (min-width: 1180px) {
+        .hike-search-form {
+            display: flex;
+        }
+
+        .hike-search-btn {
+            display: none;
+        }
+    }
 `;

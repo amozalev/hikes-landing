@@ -5,6 +5,7 @@ import Menu from '../Menu/Menu';
 import Container from '../Container/Container';
 import { LogoIcon } from '../Icons/LogoIcon';
 import HikeSearchForm from '../HikeSearchForm/HikeSearchForm';
+import { Button } from '../Button/Button';
 
 const Header = () => {
     return (
@@ -21,6 +22,9 @@ const Header = () => {
                     </T.Title1>
                 </div>
                 <HikeSearchForm className="hike-search-form" />
+                <div className="hike-search-btn">
+                    <Button title="Найти программу" color="#1A3E3E" large />
+                </div>
             </Container>
         </S.StyledHeader>
     );
