@@ -28,11 +28,11 @@ export const StyledAboutSection = styled.div`
         display: grid;
         grid-area: images;
         justify-content: center;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     .image-wrapper {
-        width: 358px;
+        width: 100%;
         border-radius: 24px;
         z-index: 1;
     }
@@ -53,6 +53,7 @@ export const StyledAboutSection = styled.div`
         .image-outer {
             height: 526px;
             justify-content: flex-end;
+            align-items: end;
         }
 
         .image-outer:after {
