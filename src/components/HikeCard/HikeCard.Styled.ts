@@ -41,4 +41,12 @@ export const StyledHikeCard = styled.div`
         border-radius: 4px;
         background: rgba(255, 255, 255, 0.3);
     }
+
+    @media (min-width: 1180px) {
+        .card {
+            width: 380px;
+            height: 500px;
+            border-radius: 32px;
+        }
+    }
 `;

@@ -104,6 +104,7 @@ export const TINY_SLIDER_SETTINGS = {
     mouseDrag: true,
     controls: false,
     gutter: 10,
-    fixedWidth: 285,
+    // fixedWidth: 380,
+    autoWidth: true,
     center: true,
 };
