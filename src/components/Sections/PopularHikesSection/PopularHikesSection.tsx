@@ -1,4 +1,4 @@
-import Section from '../../Section/Section';
+import ColoredSection from '../../Section/ColoredSection';
 import HikeCard, { Hike } from '../../HikeCard/HikeCard';
 import Article from '../../Article/Article';
 import { Button } from '../../Button/Button';
@@ -12,7 +12,7 @@ type Props = {
 
 const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
     return (
-        <Section
+        <ColoredSection
             description="по версии отдыхающих"
             title="Популярные направления"
         >
@@ -34,7 +34,7 @@ const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
                     backgroundColor="#1A3E3E"
                 />
             </Article>
-        </Section>
+        </ColoredSection>
     );
 };
 

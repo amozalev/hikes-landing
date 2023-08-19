@@ -1,6 +1,6 @@
 import * as S from './AdvantagesSection.Styled';
 import * as T from '../../Text/TextStyles';
-import Section from '../../Section/Section';
+import ColoredSection from '../../Section/ColoredSection';
 import Article from '../../Article/Article';
 import { TouristsIcon } from '../../Icons/TouristsIcon';
 import { ShieldIcon } from '../../Icons/ShieldIcon';
@@ -10,7 +10,7 @@ import { Button } from '../../Button/Button';
 
 const AdvantagesSection = () => {
     return (
-        <Section
+        <ColoredSection
             description="наше предложение"
             title="Лучшие программы для тебя"
             backgroundColor="#F3F5F4"
@@ -64,7 +64,7 @@ const AdvantagesSection = () => {
                     />
                 </Article>
             </S.StyledAdvantagesSection>
-        </Section>
+        </ColoredSection>
     );
 };
 

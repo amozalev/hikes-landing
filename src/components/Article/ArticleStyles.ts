@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 type Props = {
     gap?: number;
-    marginTop?: number;
 };
 
 export const StyledArticle = styled.article<Props>`
@@ -13,10 +12,5 @@ export const StyledArticle = styled.article<Props>`
         gap &&
         `
     gap: ${gap}px;
-  `}
-    ${({ marginTop }) =>
-        marginTop &&
-        `
-    margin-top: ${marginTop}px;
   `}
 `;

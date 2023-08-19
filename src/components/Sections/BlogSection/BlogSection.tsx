@@ -1,4 +1,4 @@
-import Section from '../../Section/Section';
+import ColoredSection from '../../Section/ColoredSection';
 import TinySlider from 'tiny-slider-react';
 import { Button } from '../../Button/Button';
 import Article from '../../Article/Article';
@@ -14,7 +14,7 @@ type Props = {
 const BlogSection = ({ posts, tinySliderSettings }: Props) => {
 
     return (
-        <Section
+        <ColoredSection
             description="делимся впечатлениями"
             title="Блог о путешествиях"
             backgroundColor="#F3F5F4"
@@ -31,7 +31,7 @@ const BlogSection = ({ posts, tinySliderSettings }: Props) => {
                     backgroundColor="#1A3E3E"
                 />
             </Article>
-        </Section>
+        </ColoredSection>
     );
 };
 
