@@ -65,7 +65,7 @@ const AdvantagesSection = () => {
                                 </T.Text2>
                             </div>
                         </div>
-                        <div>
+                        <div className="btn-wrapper">
                             <Button
                                 title="Стоимость программ"
                                 color="#FDFDFD"

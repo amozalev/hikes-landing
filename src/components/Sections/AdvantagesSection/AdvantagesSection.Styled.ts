@@ -35,6 +35,11 @@ export const StyledAdvantagesSection = styled.div`
         display: none;
     }
 
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     @media (min-width: 1180px) {
         gap: 90px;
         grid-template: 1fr / 1fr 1fr;
