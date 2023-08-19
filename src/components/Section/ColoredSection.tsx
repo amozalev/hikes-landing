@@ -13,11 +13,11 @@ const ColoredSection: React.FC<Props> = ({
     ...containerProps
 }) => {
     return (
-        <S.StyledSection backgroundColor={backgroundColor}>
+        <S.StyledColoredSection backgroundColor={backgroundColor}>
             <Container {...containerProps}>
                 <div className="content">{children}</div>
             </Container>
-        </S.StyledSection>
+        </S.StyledColoredSection>
     );
 };
 

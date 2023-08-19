@@ -8,6 +8,7 @@ export const StyledAboutSection = styled.div`
     grid-template-areas:
         'article'
         'images';
+    padding: 50px 0;
 
     .article-outer {
         display: grid;
@@ -47,6 +48,7 @@ export const StyledAboutSection = styled.div`
         gap: 120px;
         grid-template: 1fr / 1fr 1fr;
         grid-template-areas: 'images article';
+        padding: 100px 0;
 
         .image-outer {
             height: 526px;

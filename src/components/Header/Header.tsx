@@ -10,7 +10,7 @@ import { Button } from '../Button/Button';
 const Header = () => {
     return (
         <S.StyledHeader>
-            <Container paddingTop={20}>
+            <Container>
                 <div className="menu-wrapper">
                     <LogoIcon />
                     <Menu />

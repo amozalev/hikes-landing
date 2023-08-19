@@ -7,7 +7,7 @@ import SectionHeader from '../../SectionHeader/SectionHeader';
 
 const AboutSection = () => {
     return (
-        <ColoredSection paddingTop={100} paddingBottom={100}>
+        <ColoredSection>
             <S.StyledAboutSection>
                 <div className="article-outer">
                     <article className="article">

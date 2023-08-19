@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export type ContainerProps = {
     gap?: number;
-    paddingTop?: number;
     paddingRight?: number;
-    paddingBottom?: number;
     paddingLeft?: number;
 };
 
@@ -16,9 +14,7 @@ export const StyledContainer = styled.div.attrs({
     width: 100%;
     max-width: 1180px;
     margin: 0 auto;
-    padding-top: ${({ paddingTop }) => paddingTop ?? '50'}px;
     padding-right: ${({ paddingRight }) => paddingRight ?? '16'}px;
-    padding-bottom: ${({ paddingBottom }) => paddingBottom ?? '50'}px;
     padding-left: ${({ paddingLeft }) => paddingLeft ?? '16'}px;
     ${({ gap }) =>
         gap &&
@@ -27,8 +23,6 @@ export const StyledContainer = styled.div.attrs({
   `};
 
     @media (min-width: 1180px) {
-        padding-top: ${({ paddingTop }) => paddingTop ?? '80'}px;
-        padding-bottom: ${({ paddingBottom }) => paddingBottom ?? '80'}px;
         padding-left: 0;
         padding-right: 0;
     }

@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
     background-image: image-set(url(${mountainsWebp}), url(${mountainsJpg}));
     background-position: center;
     background-size: cover;
+    padding: 20px 0 50px;
 
     .menu-wrapper {
         display: flex;
@@ -29,6 +30,8 @@ export const StyledHeader = styled.header`
     }
 
     @media (min-width: 1180px) {
+        padding: 16px 0 82px;
+
         .hike-search-form {
             display: flex;
         }
