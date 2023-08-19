@@ -1,9 +1,10 @@
+import * as S from './PopularHikesSection.Styled';
 import ColoredSection from '../../Section/ColoredSection';
 import HikeCard, { Hike } from '../../HikeCard/HikeCard';
-import Article from '../../Article/Article';
 import { Button } from '../../Button/Button';
 import TinySlider from 'tiny-slider-react';
 import 'tiny-slider/dist/tiny-slider.css';
+import SectionHeader from '../../SectionHeader/SectionHeader';
 
 type Props = {
     hikes: Hike[];
@@ -12,11 +13,12 @@ type Props = {
 
 const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
     return (
-        <ColoredSection
-            description="по версии отдыхающих"
-            title="Популярные направления"
-        >
-            <Article marginTop={32} gap={32}>
+        <ColoredSection>
+            <S.PopularHikesSectionStyled>
+                <SectionHeader
+                    description="по версии отдыхающих"
+                    title="Популярные направления"
+                />
                 <TinySlider settings={tinySliderSettings}>
                     {hikes.map(({ rating, image, title, price }, index) => (
                         <HikeCard
@@ -33,7 +35,7 @@ const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
                     color="#FDFDFD"
                     backgroundColor="#1A3E3E"
                 />
-            </Article>
+            </S.PopularHikesSectionStyled>
         </ColoredSection>
     );
 };
