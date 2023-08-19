@@ -27,6 +27,8 @@ export const StyledContainer = styled.div.attrs({
   `};
 
     @media (min-width: 1180px) {
+        padding-top: ${({ paddingTop }) => paddingTop ?? '80'}px;
+        padding-bottom: ${({ paddingBottom }) => paddingBottom ?? '80'}px;
         padding-left: 0;
         padding-right: 0;
     }
