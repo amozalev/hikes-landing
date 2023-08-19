@@ -8,8 +8,8 @@ export const StyledBurgerMenu = styled.div`
         height: 100vh;
         top: 0;
         left: 0;
-        transform: translateX(100vw);
-        transition: transform 250ms linear;
+        transform: translateX(200vw);
+        transition: transform 350ms linear;
     }
 
     .menu[data-open='true'] {
