@@ -1,10 +1,11 @@
+import * as S from './BlogSection.Styled';
 import ColoredSection from '../../Section/ColoredSection';
 import TinySlider from 'tiny-slider-react';
 import { Button } from '../../Button/Button';
-import Article from '../../Article/Article';
 import BlogPostCard, {
     BlogPostCardType,
 } from '../../BlogPostCard/BlogPostCard';
+import SectionHeader from '../../SectionHeader/SectionHeader';
 
 type Props = {
     posts: BlogPostCardType[];
@@ -12,25 +13,33 @@ type Props = {
 };
 
 const BlogSection = ({ posts, tinySliderSettings }: Props) => {
-
     return (
-        <ColoredSection
-            description="делимся впечатлениями"
-            title="Блог о путешествиях"
-            backgroundColor="#F3F5F4"
-        >
-            <Article marginTop={32} gap={32}>
-                <TinySlider settings={tinySliderSettings}>
+        <ColoredSection backgroundColor="#F3F5F4">
+            <S.BlogSectionStyled>
+                <SectionHeader
+                    description="делимся впечатлениями"
+                    title="Блог о путешествиях"
+                />
+                <div className="posts">
                     {posts.map(({ ...props }, index) => (
                         <BlogPostCard key={index} {...props} />
                     ))}
-                </TinySlider>
-                <Button
-                    title="Другие материалы"
-                    color="#FDFDFD"
-                    backgroundColor="#1A3E3E"
-                />
-            </Article>
+                </div>
+                <div className="slider">
+                    <TinySlider settings={tinySliderSettings}>
+                        {posts.map(({ ...props }, index) => (
+                            <BlogPostCard key={index} {...props} />
+                        ))}
+                    </TinySlider>
+                </div>
+                <div>
+                    <Button
+                        title="Другие материалы"
+                        color="#FDFDFD"
+                        backgroundColor="#1A3E3E"
+                    />
+                </div>
+            </S.BlogSectionStyled>
         </ColoredSection>
     );
 };

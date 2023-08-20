@@ -8,10 +8,8 @@ export const StyledBlogPostCard = styled.div<Props>`
     .card {
         display: flex;
         flex-direction: column;
-
         width: 285px;
         height: 496px;
-
         background: #fff;
         border-radius: 6px;
     }
@@ -29,7 +27,7 @@ export const StyledBlogPostCard = styled.div<Props>`
     }
 
     .content {
-        height: 216px;
+        //height: 216px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -39,6 +37,7 @@ export const StyledBlogPostCard = styled.div<Props>`
     }
 
     .text {
+      //TODO fix text cut
         //height: 80px;
         width: 253px;
         overflow: hidden;
@@ -66,5 +65,22 @@ export const StyledBlogPostCard = styled.div<Props>`
     .footer {
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (min-width: 1180px) {
+        .card {
+            flex-direction: row;
+            gap: 24px;
+            width: 580px;
+            height: 312px;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        .image-wrapper {
+            min-width: 230px;
+            height: 280px;
+            border-radius: 6px;
+        }
     }
 `;
