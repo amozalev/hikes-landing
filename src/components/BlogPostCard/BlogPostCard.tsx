@@ -11,7 +11,7 @@ export type BlogPostCardType = {
 const BlogPostCard = ({ image, title, text, date }: BlogPostCardType) => {
     return (
         <S.StyledBlogPostCard>
-            <article className="card">
+            <div className="card">
                 <div className="image-wrapper">
                     <img className="image" src={image} />
                 </div>
@@ -31,7 +31,7 @@ const BlogPostCard = ({ image, title, text, date }: BlogPostCardType) => {
                         </T.StyledLink>
                     </div>
                 </div>
-            </article>
+            </div>
         </S.StyledBlogPostCard>
     );
 };
