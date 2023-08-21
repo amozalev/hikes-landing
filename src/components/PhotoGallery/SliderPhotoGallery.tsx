@@ -1,18 +1,18 @@
-import * as S from './PhotoGallery.Styled';
+import * as S from './SliderPhotoGallery.Styled';
 
 export type GalleryPhotoType = {
     image: string;
     description: string;
 };
 
-const PhotoGallery = ({ image, description }: GalleryPhotoType) => {
+const SliderPhotoGallery = ({ image, description }: GalleryPhotoType) => {
     return (
-        <S.StyledPhotoGallery>
+        <S.StyledSliderPhotoGallery>
             <figure className="card">
                 <img className="image" src={image} alt={description} />
             </figure>
-        </S.StyledPhotoGallery>
+        </S.StyledSliderPhotoGallery>
     );
 };
 
-export default PhotoGallery;
+export default SliderPhotoGallery;

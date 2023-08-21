@@ -1,11 +1,12 @@
+import * as S from './GallerySectionStyled';
 import ColoredSection from '../../Section/ColoredSection';
-import Article from '../../Article/Article';
 import TinySlider from 'tiny-slider-react';
 import { Button } from '../../Button/Button';
-import PhotoGallery, {
+import SliderPhotoGallery, {
     GalleryPhotoType,
-} from '../../PhotoGallery/PhotoGallery';
+} from '../../PhotoGallery/SliderPhotoGallery';
 import SubscriptionForm from '../../NewsSubscriptionForm/SubscriptionForm';
+import SectionHeader from '../../SectionHeader/SectionHeader';
 
 type Props = {
     photos: GalleryPhotoType[];
@@ -14,20 +15,38 @@ type Props = {
 
 const GallerySection = ({ photos, tinySliderSettings }: Props) => {
     return (
-        <ColoredSection description="фото-отчет" title="Делимся впечатлениями">
-            <Article marginTop={32} gap={32}>
-                <TinySlider settings={tinySliderSettings}>
-                    {photos.map(({ ...props }, index) => (
-                        <PhotoGallery key={index} {...props} />
-                    ))}
-                </TinySlider>
-                <Button
-                    title="Наш Pinterest"
-                    color="#FDFDFD"
-                    backgroundColor="#1A3E3E"
+        <ColoredSection>
+            <S.GallerySectionStyled>
+                <SectionHeader
+                    description="фото-отчет"
+                    title="Делимся впечатлениями"
                 />
+                <div className="gallery">
+                    {photos.map(({ image, description }, index) => (
+                        <img
+                            className={`grid-image grid-image-${index}`}
+                            key={index}
+                            src={image}
+                            alt={description}
+                        />
+                    ))}
+                </div>
+                <div className="slider">
+                    <TinySlider settings={tinySliderSettings}>
+                        {photos.map(({ ...props }, index) => (
+                            <SliderPhotoGallery key={index} {...props} />
+                        ))}
+                    </TinySlider>
+                </div>
+                <div className="button-outer">
+                    <Button
+                        title="Наш Pinterest"
+                        color="#FDFDFD"
+                        backgroundColor="#1A3E3E"
+                    />
+                </div>
                 <SubscriptionForm />
-            </Article>
+            </S.GallerySectionStyled>
         </ColoredSection>
     );
 };

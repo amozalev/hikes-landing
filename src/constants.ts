@@ -13,7 +13,7 @@ import photosOnMap from './assets/images/photos_and_map.jpg';
 import rainbow from './assets/images/rainbow.jpg';
 import waterfall from './assets/images/waterfall.jpg';
 import { BlogPostCardType } from './components/BlogPostCard/BlogPostCard';
-import { GalleryPhotoType } from './components/PhotoGallery/PhotoGallery';
+import { GalleryPhotoType } from './components/PhotoGallery/SliderPhotoGallery';
 import { NavLinkType } from './components/NavLink/NavLink';
 
 export const HIKES: Hike[] = [
