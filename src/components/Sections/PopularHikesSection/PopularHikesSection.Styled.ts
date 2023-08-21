@@ -6,6 +6,11 @@ export const PopularHikesSectionStyled = styled.div`
     gap: 32px;
     padding: 50px 0;
 
+    .button-outer {
+        display: flex;
+        justify-content: center;
+    }
+
     @media (min-width: 1180px) {
         align-items: center;
         gap: 50px;

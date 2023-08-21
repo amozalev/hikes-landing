@@ -14,6 +14,11 @@ export const BlogSectionStyled = styled.div`
         display: block;
     }
 
+    .button-outer {
+        display: flex;
+        justify-content: center;
+    }
+
     @media (min-width: 1180px) {
         align-items: center;
         gap: 0;

@@ -32,7 +32,7 @@ const BlogSection = ({ posts, tinySliderSettings }: Props) => {
                         ))}
                     </TinySlider>
                 </div>
-                <div>
+                <div className="button-outer">
                     <Button
                         title="Другие материалы"
                         color="#FDFDFD"

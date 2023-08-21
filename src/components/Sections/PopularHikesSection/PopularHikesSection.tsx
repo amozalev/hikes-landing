@@ -30,11 +30,13 @@ const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
                         />
                     ))}
                 </TinySlider>
-                <Button
-                    title="Рейтинг направлений"
-                    color="#FDFDFD"
-                    backgroundColor="#1A3E3E"
-                />
+                <div className="button-outer">
+                    <Button
+                        title="Рейтинг направлений"
+                        color="#FDFDFD"
+                        backgroundColor="#1A3E3E"
+                    />
+                </div>
             </S.PopularHikesSectionStyled>
         </ColoredSection>
     );
