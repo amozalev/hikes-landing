@@ -20,6 +20,10 @@ export const GallerySectionStyled = styled.div`
     }
 
     @media (min-width: 1180px) {
+        align-items: center;
+        gap: 50px;
+        padding-top: 80px;
+
         .gallery {
             display: grid;
             grid-template: repeat(2, 250px) / repeat(4, 280px);

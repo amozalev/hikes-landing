@@ -8,4 +8,8 @@ export const StyledSubscriptionForm = styled.div`
     border-radius: 6px;
     background: #fdfdfd;
     box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
+
+    @media (min-width: 1180px) {
+        margin-top: 50px;
+    }
 `;
