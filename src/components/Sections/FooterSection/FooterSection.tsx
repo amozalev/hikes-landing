@@ -11,7 +11,7 @@ import { FOOTER_LINKS1, FOOTER_LINKS2 } from '../../../constants';
 const FooterSection = () => {
     return (
         <S.StyledFooterSection>
-            <Container paddingBottom={80}>
+            <Container>
                 <div className="wrapper">
                     <div className="section contacts-wrapper">
                         <T.Title3 color="#F3F5F4" marginBottom={17}>

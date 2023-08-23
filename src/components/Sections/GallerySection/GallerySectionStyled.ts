@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const GallerySectionStyled = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -22,7 +23,7 @@ export const GallerySectionStyled = styled.div`
     @media (min-width: 1180px) {
         align-items: center;
         gap: 50px;
-        padding-top: 80px;
+        padding: 80px 0;
 
         .gallery {
             display: grid;
@@ -70,6 +71,10 @@ export const GallerySectionStyled = styled.div`
         .grid-image-5 {
             grid-row: 2;
             grid-column: 4;
+        }
+
+        .button-outer {
+            margin-bottom: 118px;
         }
     }
 `;
