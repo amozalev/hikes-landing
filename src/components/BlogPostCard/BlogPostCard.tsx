@@ -3,17 +3,18 @@ import * as T from '../Text/TextStyles';
 
 export type BlogPostCardType = {
     image: string;
+    alt: string;
     title: string;
     text: string;
     date: string;
 };
 
-const BlogPostCard = ({ image, title, text, date }: BlogPostCardType) => {
+const BlogPostCard = ({ image, alt, title, text, date }: BlogPostCardType) => {
     return (
         <S.StyledBlogPostCard>
             <div className="card">
                 <div className="image-wrapper">
-                    <img className="image" src={image} />
+                    <img className="image" src={image} alt={alt} />
                 </div>
                 <div className="content">
                     <div className="title">

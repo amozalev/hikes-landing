@@ -7,12 +7,17 @@ import { LabelIcon } from '../../Icons/LabelIcon';
 import AdvantageIconCard from '../../AdvantageIconCard/AdvantageIconCard';
 import { Button } from '../../Button/Button';
 import SectionHeader from '../../SectionHeader/SectionHeader';
-import backpackerImg from '../../../assets/images/advantages_backpacker_lake.jpg';
-import fieldMountainImg from '../../../assets/images/advantages_field_mountain.jpg';
-import fireImg from '../../../assets/images/advantages_fire.jpg';
-import yellowCoatImg from '../../../assets/images/advantages_yellow_coat.jpg';
 
-const AdvantagesSection = () => {
+export type AdvantageImage = {
+    image: string;
+    alt: string;
+};
+
+type Props = {
+    images: AdvantageImage[];
+};
+
+const AdvantagesSection = ({ images }: Props) => {
     return (
         <ColoredSection backgroundColor="#F3F5F4">
             <S.StyledAdvantagesSection>
@@ -76,10 +81,16 @@ const AdvantagesSection = () => {
                 </div>
                 <div className="gallery-outer">
                     <div className="gallery">
-                        <img className="image" src={backpackerImg} />
-                        <img className="image" src={fieldMountainImg} />
-                        <img className="image" src={fireImg} />
-                        <img className="image" src={yellowCoatImg} />
+                        {images.map(({ image, alt }, ind) => {
+                            return (
+                                <img
+                                    key={ind}
+                                    className="image"
+                                    src={image}
+                                    alt={alt}
+                                />
+                            );
+                        })}
                     </div>
                 </div>
             </S.StyledAdvantagesSection>

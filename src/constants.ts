@@ -15,6 +15,11 @@ import waterfall from './assets/images/waterfall.jpg';
 import { BlogPostCardType } from './components/BlogPostCard/BlogPostCard';
 import { GalleryPhotoType } from './components/PhotoGallery/SliderPhotoGallery';
 import { NavLinkType } from './components/NavLink/NavLink';
+import { AdvantageImage } from './components/Sections/AdvantagesSection/AdvantagesSection';
+import backpackerImg from './assets/images/advantages_backpacker_lake.jpg';
+import fieldMountainImg from './assets/images/advantages_field_mountain.jpg';
+import fireImg from './assets/images/advantages_fire.jpg';
+import yellowCoatImg from './assets/images/advantages_yellow_coat.jpg';
 
 export const HIKES: Hike[] = [
     {
@@ -37,27 +42,50 @@ export const HIKES: Hike[] = [
     },
 ];
 
+export const ADVANTAGES_IMAGES: AdvantageImage[] = [
+    {
+        image: backpackerImg,
+        alt: 'Путешественник на берегу озера',
+    },
+    {
+        image: fieldMountainImg,
+        alt: 'Поле перед горой',
+    },
+    {
+        image: fireImg,
+        alt: 'Ночной костёр',
+    },
+    {
+        image: yellowCoatImg,
+        alt: 'Девушка в жёлтой куртке',
+    },
+];
+
 export const POSTS: BlogPostCardType[] = [
     {
         image: italyImg,
+        alt: 'Вид Италии',
         title: 'Красивая Италия, какая она в реальности?',
         text: 'Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.',
         date: '01/04/2023',
     },
     {
         image: flightImg,
+        alt: 'Полёт самолёта в облаках',
         title: 'Долой сомнения! Весь мир открыт для вас!',
         text: 'Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.',
         date: '01/04/2023',
     },
     {
         image: backpackImg,
+        alt: 'Путешественник',
         title: 'Как подготовиться к путешествию в одиночку?',
         text: 'Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации. Надо подготовить список необходимых вещей.',
         date: '02/05/2023',
     },
     {
         image: mosqueImg,
+        alt: 'Вид на мечеть',
         title: 'Индия ... летим?',
         text: 'Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации. Удивительная и многообразная страна с неповторимой культурой.',
         date: '03/06/2023',
