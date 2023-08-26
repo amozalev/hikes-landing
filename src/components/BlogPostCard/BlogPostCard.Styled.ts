@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { commonTextStyles, TextProps } from '../Text/TextStyles';
 
 type Props = {
     backgroundColor?: string | undefined;
@@ -15,7 +16,6 @@ export const StyledBlogPostCard = styled.div<Props>`
     }
 
     .image-wrapper {
-        width: 285px;
         height: 280px;
     }
 
@@ -27,7 +27,6 @@ export const StyledBlogPostCard = styled.div<Props>`
     }
 
     .content {
-        //height: 216px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -37,30 +36,18 @@ export const StyledBlogPostCard = styled.div<Props>`
     }
 
     .text {
-      //TODO fix text cut
-        //height: 80px;
-        width: 253px;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .text > * {
         overflow: hidden;
         text-overflow: ellipsis;
-        //white-space: nowrap;
-        position: relative;
-
-        //display: -webkit-box;
-        //-webkit-line-clamp: 4;
-        //-webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: auto;
     }
-
-    .text:after {
-        content: '...';
-    }
-
-    //.text + * {
-    //    text-overflow: ellipsis;
-    //    //white-space: nowrap;
-    //    display: -webkit-box;
-    //    -webkit-line-clamp: 4;
-    //    -webkit-box-orient: vertical;
-    //}
 
     .footer {
         display: flex;
@@ -78,9 +65,42 @@ export const StyledBlogPostCard = styled.div<Props>`
         }
 
         .image-wrapper {
-            min-width: 230px;
+            display: flex;
+            flex: 0 0 230px;
             height: 280px;
             border-radius: 6px;
         }
+
+        .image {
+            border-radius: 6px;
+        }
+
+        .content {
+            padding: 16px 0;
+            gap: 24px;
+        }
+
+        .text > * {
+            -webkit-line-clamp: 4;
+        }
     }
+`;
+
+export const H2 = styled.h2<TextProps>`
+    ${commonTextStyles};
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+
+    @media (min-width: 1180px) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+`;
+
+export const Text2 = styled.p<TextProps>`
+    ${commonTextStyles};
+    font-size: 14px;
+    line-height: 20px;
 `;

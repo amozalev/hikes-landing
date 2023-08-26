@@ -18,15 +18,15 @@ const BlogPostCard = ({ image, alt, title, text, date }: BlogPostCardType) => {
                 </div>
                 <div className="content">
                     <div className="title">
-                        <T.Title2>{title}</T.Title2>
+                        <S.H2>{title}</S.H2>
                     </div>
                     <div className="text">
-                        <T.Text2>{text}</T.Text2>
+                        <S.Text2>{text}</S.Text2>
                     </div>
                     <div className="footer">
-                        <T.Text2 color={'#F2BE22'} weight={700}>
+                        <S.Text2 color={'#F2BE22'} weight={700}>
                             {date}
-                        </T.Text2>
+                        </S.Text2>
                         <T.StyledLink to="#" weight={700} color={'#1A3E3E'}>
                             Читать статью
                         </T.StyledLink>

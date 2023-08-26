@@ -1,5 +1,4 @@
 import * as S from './HeaderStyles';
-import * as T from '../Text/TextStyles';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import Menu from '../Menu/Menu';
 import Container from '../Container/Container';
@@ -11,16 +10,14 @@ const Header = () => {
     return (
         <S.StyledHeader>
             <Container>
-                <div className="menu-wrapper">
+                <header className="menu-wrapper">
                     <LogoIcon />
                     <Menu />
                     <BurgerMenu />
-                </div>
-                <div className="title">
-                    <T.Title1 color="#fdfdfd">
-                        Насладись прогулкой в горах с командой единомышленников
-                    </T.Title1>
-                </div>
+                </header>
+                <S.H1>
+                    Насладись прогулкой в горах с командой единомышленников
+                </S.H1>
                 <HikeSearchForm className="hike-search-form" />
                 <div className="hike-search-btn">
                     <Button title="Найти программу" color="#1A3E3E" large />

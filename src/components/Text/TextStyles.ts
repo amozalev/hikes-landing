@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 type FontWeight = 200 | 300 | 400 | 500 | 600 | 700;
 
 export interface TextProps {
+    className?: string;
     fontSize?: number;
     weight?: FontWeight;
     color?: string;
@@ -12,6 +13,23 @@ export interface TextProps {
     marginTop?: number;
     marginBottom?: number;
 }
+
+export const commonTextStyles = css<TextProps>`
+    font-style: normal;
+    color: ${({ color }) => color || '#18121e'};
+    font-weight: ${({ weight }) => weight || 400};
+    line-height: ${({ lineHeight }) => lineHeight || 20}px;
+    ${({ marginTop }) =>
+        marginTop &&
+        `
+    margin-top: ${marginTop}px
+    `};
+    ${({ marginBottom }) =>
+        marginBottom &&
+        `
+    margin-bottom: ${marginBottom}px
+    `};
+`;
 
 export const Text = styled.span<TextProps>`
     font-style: normal;
@@ -52,13 +70,6 @@ export const StyledLink = styled(Link)<TextProps>`
         `
     text-decoration-color: ${color};
     `};
-`;
-
-export const Title1 = styled(Text)<TextProps>`
-    font-family: 'NEXT ART', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 42px;
 `;
 
 export const Title2 = styled(Text)<TextProps>`

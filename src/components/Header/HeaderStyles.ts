@@ -1,24 +1,21 @@
 import styled from 'styled-components';
 import mountainsJpg from './images/mountains.jpg';
 import mountainsWebp from './images/mountains.webp';
+import { commonTextStyles, TextProps } from '../Text/TextStyles';
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled.section`
     display: flex;
     flex-direction: row;
     background-image: image-set(url(${mountainsWebp}), url(${mountainsJpg}));
     background-position: center;
     background-size: cover;
     padding: 20px 0 50px;
+    height: 100vh;
 
     .menu-wrapper {
         display: flex;
         justify-content: space-between;
         height: 44px;
-    }
-
-    .title {
-        display: flex;
-        margin: 234px 13px 32px 0;
     }
 
     .hike-search-form {
@@ -39,5 +36,23 @@ export const StyledHeader = styled.header`
         .hike-search-btn {
             display: none;
         }
+    }
+`;
+
+export const H1 = styled.h1<TextProps>`
+    ${commonTextStyles};
+    color: #fdfdfd;
+    font-family: 'NEXT ART', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    margin: auto 0 32px;
+
+    @media (min-width: 1180px) {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 75px;
+        letter-spacing: 1px;
+        margin: auto 0 41px;
     }
 `;
