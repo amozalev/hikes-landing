@@ -10,7 +10,7 @@ export const StyledHeader = styled.section`
     background-position: center;
     background-size: cover;
     padding: 20px 0 50px;
-    height: 100vh;
+    height: 100dvh;
 
     .menu-wrapper {
         display: flex;
