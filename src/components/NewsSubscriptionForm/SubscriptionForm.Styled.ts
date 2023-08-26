@@ -20,7 +20,7 @@ export const StyledSubscriptionForm = styled.div`
         display: flex;
         flex-direction: column;
         gap: 16px;
-        align-items: end;
+        align-items: stretch;
     }
 
     .disclaimer {
@@ -37,6 +37,7 @@ export const StyledSubscriptionForm = styled.div`
 
         .form {
             flex-direction: row;
+            align-items: end;
         }
 
         .disclaimer {

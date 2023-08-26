@@ -20,14 +20,14 @@ export const GallerySectionStyled = styled.div`
         justify-content: center;
     }
 
-    @media (min-width: 1180px) {
+    @media (min-width: 768px) {
         align-items: center;
         gap: 50px;
         padding: 80px 0;
 
         .gallery {
             display: grid;
-            grid-template: repeat(2, 250px) / repeat(4, 280px);
+            grid-template: repeat(2, 250px) / repeat(4, minmax(auto, 280px));
             gap: 20px;
         }
 
