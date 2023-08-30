@@ -7,14 +7,10 @@ import { LabelIcon } from '../../Icons/LabelIcon';
 import AdvantageIconCard from '../../AdvantageIconCard/AdvantageIconCard';
 import { Button } from '../../Button/Button';
 import SectionHeader from '../../SectionHeader/SectionHeader';
-
-export type AdvantageImage = {
-    image: string;
-    alt: string;
-};
+import Image, { ImageType } from '../../Image/Image';
 
 type Props = {
-    images: AdvantageImage[];
+    images: ImageType[];
 };
 
 const AdvantagesSection = ({ images }: Props) => {
@@ -81,12 +77,13 @@ const AdvantagesSection = ({ images }: Props) => {
                 </div>
                 <div className="gallery-outer">
                     <div className="gallery">
-                        {images.map(({ image, alt }, ind) => {
+                        {images.map(({ image, imageWebp, alt }, ind) => {
                             return (
-                                <img
+                                <Image
                                     key={ind}
                                     className="image"
-                                    src={image}
+                                    image={image}
+                                    imageWebp={imageWebp}
                                     alt={alt}
                                 />
                             );

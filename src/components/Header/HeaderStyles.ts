@@ -6,7 +6,10 @@ import { commonTextStyles, TextProps } from '../Text/TextStyles';
 export const StyledHeader = styled.section`
     display: flex;
     flex-direction: row;
-    background-image: image-set(url(${mountainsWebp}), url(${mountainsJpg}));
+    background-image: image-set(
+        url(${mountainsWebp.replace('\\', '/')}),
+        url(${mountainsJpg.replace('\\', '/')})
+    );
     background-position: center;
     background-size: cover;
     padding: 20px 0 50px;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import mountainVideoPreview from '../../../assets/images/mountain_video_preview.jpg';
+import mountainVideoPreviewWebp from '../../../assets/images/mountain_video_preview.webp';
 
 export const StyledAboutSection = styled.div`
     display: grid;
@@ -57,7 +58,10 @@ export const StyledAboutSection = styled.div`
         }
 
         .image-outer:after {
-            content: url(${mountainVideoPreview});
+            content: image-set(
+                url(${mountainVideoPreviewWebp.replace('\\', '/')}),
+                url(${mountainVideoPreview.replace('\\', '/')})
+            );
             position: absolute;
             top: 0;
             left: 0;

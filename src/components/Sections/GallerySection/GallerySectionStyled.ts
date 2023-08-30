@@ -35,8 +35,7 @@ export const GallerySectionStyled = styled.div`
             display: none;
         }
 
-        .grid-image {
-            display: grid;
+        .gallery-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -44,31 +43,37 @@ export const GallerySectionStyled = styled.div`
         }
 
         .grid-image-0 {
+            display: grid;
             grid-row: 1;
             grid-column: 1 / 3;
         }
 
         .grid-image-1 {
+            display: grid;
             grid-row: 1;
             grid-column: 3 / 3;
         }
 
         .grid-image-2 {
+            display: grid;
             grid-row: 1;
             grid-column: 4 / 4;
         }
 
         .grid-image-3 {
+            display: grid;
             grid-row: 2;
             grid-column: 1;
         }
 
         .grid-image-4 {
+            display: grid;
             grid-row: 2;
             grid-column: 2 / 4;
         }
 
         .grid-image-5 {
+            display: grid;
             grid-row: 2;
             grid-column: 4;
         }

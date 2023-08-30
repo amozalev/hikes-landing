@@ -1,20 +1,34 @@
 import * as S from './BlogPostCard.Styled';
 import * as T from '../Text/TextStyles';
+import Image from '../Image/Image';
 
 export type BlogPostCardType = {
     image: string;
+    imageWebp: string;
     alt: string;
     title: string;
     text: string;
     date: string;
 };
 
-const BlogPostCard = ({ image, alt, title, text, date }: BlogPostCardType) => {
+const BlogPostCard = ({
+    image,
+    imageWebp,
+    alt,
+    title,
+    text,
+    date,
+}: BlogPostCardType) => {
     return (
         <S.StyledBlogPostCard>
             <div className="card">
                 <div className="image-wrapper">
-                    <img className="image" src={image} alt={alt} />
+                    <Image
+                        imageWebp={imageWebp}
+                        image={image}
+                        alt={alt}
+                        className="image"
+                    />
                 </div>
                 <div className="content">
                     <div className="title">

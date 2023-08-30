@@ -20,15 +20,18 @@ const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
                     title="Популярные направления"
                 />
                 <TinySlider settings={tinySliderSettings}>
-                    {hikes.map(({ rating, image, title, price }, index) => (
-                        <HikeCard
-                            key={index}
-                            rating={rating}
-                            image={image}
-                            title={title}
-                            price={price}
-                        />
-                    ))}
+                    {hikes.map(
+                        ({ rating, image, imageWebp, title, price }, index) => (
+                            <HikeCard
+                                key={index}
+                                rating={rating}
+                                image={image}
+                                imageWebp={imageWebp}
+                                title={title}
+                                price={price}
+                            />
+                        ),
+                    )}
                 </TinySlider>
                 <div className="button-outer">
                     <Button
