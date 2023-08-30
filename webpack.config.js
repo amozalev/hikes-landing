@@ -1,7 +1,8 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => ({
     mode: 'development',
@@ -10,6 +11,8 @@ module.exports = (env, argv) => ({
         filename: 'bundle.js',
         path: path.resolve('dist'),
         publicPath: '/',
+        clean: true,
+        assetModuleFilename: path.join('images', '[name][ext]'),
     },
     module: {
         rules: [
@@ -24,24 +27,45 @@ module.exports = (env, argv) => ({
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
-            },
-            {
-                test: /\.(png|jpe?g|gif|webp)$/i,
                 use: [
-                    {
-                        loader: 'file-loader',
-                    },
+                    MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { url: false } },
+                    'postcss-loader',
                 ],
             },
             {
-                test: /\.svg$/,
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { url: false } },
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.(png|jpg|jpeg|webp|svg)$/i,
                 type: 'asset/resource',
             },
+        ],
+    },
+    optimization: {
+        minimizer: [
+            '...',
+            new ImageMinimizerPlugin({
+                minimizer: {
+                    implementation: ImageMinimizerPlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                            ['gifsicle', { interlaced: true }],
+                            ['jpegtran', { progressive: true }],
+                            ['optipng', { optimizationLevel: 5 }],
+                            ['mozjpeg', { quality: 85 }],
+                            ['svgo', { name: 'preset-default' }],
+                        ],
+                    },
+                },
+            }),
+            // new ImageminWebpWebpackPlugin(),
         ],
     },
     plugins: [
@@ -51,7 +75,9 @@ module.exports = (env, argv) => ({
         new HTMLWebpackPlugin({
             template: './public/index.html',
         }),
-        new ImageminWebpWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+        }),
     ],
     devServer: {
         host: '0.0.0.0',
