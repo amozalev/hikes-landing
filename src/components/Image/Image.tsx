@@ -7,7 +7,7 @@ export type ImageType = {
 
 const Image = ({ imageWebp, image, alt, className }: ImageType) => {
     return (
-        <picture className={className} style={{ display: 'grid' }}>
+        <picture className={className}>
             <source srcSet={imageWebp} type="image/webp" />
             <img className={className} src={image} alt={alt} />
         </picture>
