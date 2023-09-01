@@ -3,7 +3,9 @@ import * as T from '../../Text/TextStyles';
 import ColoredSection from '../../Section/ColoredSection';
 import { Button } from '../../Button/Button';
 import houseVideoPreview from '../../../assets/images/house-video-preview.jpg';
+import houseVideoPreviewWebp from '../../../assets/images/house-video-preview.webp';
 import SectionHeader from '../../SectionHeader/SectionHeader';
+import Image from '../../Image/Image';
 
 const AboutSection = () => {
     return (
@@ -39,7 +41,12 @@ const AboutSection = () => {
                 </div>
                 <div className="image-outer">
                     <div className="image-wrapper">
-                        <img className="image" src={houseVideoPreview} />
+                        <Image
+                            className="image"
+                            imageWebp={houseVideoPreviewWebp}
+                            image={houseVideoPreview}
+                            alt="Video preview"
+                        />
                     </div>
                 </div>
             </S.StyledAboutSection>
