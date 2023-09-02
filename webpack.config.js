@@ -5,10 +5,11 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => ({
+    target: ['web', 'es2023'],
     mode: 'development',
     entry: './src/index.tsx',
     output: {
-        filename: 'bundle.js',
+        filename: 'bundle.[contenthash].js',
         path: path.resolve('dist'),
         publicPath: '/',
         clean: true,
@@ -65,7 +66,6 @@ module.exports = (env, argv) => ({
                     },
                 },
             }),
-            // new ImageminWebpWebpackPlugin(),
         ],
     },
     plugins: [
