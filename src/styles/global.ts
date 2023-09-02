@@ -13,12 +13,11 @@ export default createGlobalStyle`
   }
 
   ${normalize}
-  
   html {
-    font-family: Nunito Sans;
+    font-family: 'Nunito Sans', sans-serif;
     overflow-x: hidden;
   }
-  
+
   //TODO fix this. this is for testing
   .tns-outer {
     width: 100%;
