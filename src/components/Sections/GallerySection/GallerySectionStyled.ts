@@ -42,38 +42,32 @@ export const GallerySectionStyled = styled.div`
             border-radius: 6px;
         }
 
-        .grid-image-0 {
-            display: grid;
+        .grid-item-0 {
             grid-row: 1;
             grid-column: 1 / 3;
         }
 
-        .grid-image-1 {
-            display: grid;
+        .grid-item-1 {
             grid-row: 1;
             grid-column: 3 / 3;
         }
 
-        .grid-image-2 {
-            display: grid;
+        .grid-item-2 {
             grid-row: 1;
             grid-column: 4 / 4;
         }
 
-        .grid-image-3 {
-            display: grid;
+        .grid-item-3 {
             grid-row: 2;
             grid-column: 1;
         }
 
-        .grid-image-4 {
-            display: grid;
+        .grid-item-4 {
             grid-row: 2;
             grid-column: 2 / 4;
         }
 
-        .grid-image-5 {
-            display: grid;
+        .grid-item-5 {
             grid-row: 2;
             grid-column: 4;
         }

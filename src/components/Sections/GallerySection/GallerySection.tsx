@@ -26,7 +26,7 @@ const GallerySection = ({ photos, tinySliderSettings }: Props) => {
                     {photos.map(({ image, imageWebp, description }, index) => (
                         <Image
                             key={index}
-                            className={`gallery-image grid-image-${index}`}
+                            className={`gallery-image grid-item-${index}`}
                             imageWebp={imageWebp}
                             image={image}
                             alt={description}
