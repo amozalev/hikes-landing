@@ -62,6 +62,15 @@ export const StyledBlogPostCard = styled.div<Props>`
             height: 312px;
             padding: 16px;
             border-radius: 10px;
+
+            &:hover {
+                .content {
+                    .title,
+                    .footer .read-link {
+                        text-decoration-line: underline;
+                    }
+                }
+            }
         }
 
         .image-wrapper {

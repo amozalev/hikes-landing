@@ -41,7 +41,12 @@ const BlogPostCard = ({
                         <S.Text2 color={'#F2BE22'} weight={700}>
                             {date}
                         </S.Text2>
-                        <T.StyledLink to="#" weight={700} color={'#1A3E3E'}>
+                        <T.StyledLink
+                            className="read-link"
+                            to="#"
+                            weight={700}
+                            color={'#1A3E3E'}
+                        >
                             Читать статью
                         </T.StyledLink>
                     </div>
