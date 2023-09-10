@@ -25,11 +25,20 @@ export const StyledHikeCard = styled.div`
         backdrop-filter: blur(3px);
 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 24px;
         position: absolute;
         bottom: 0;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subtitle {
+        display: none;
     }
 
     .hike-card__price {
@@ -47,6 +56,10 @@ export const StyledHikeCard = styled.div`
             width: 380px;
             height: 500px;
             border-radius: 32px;
+        }
+
+        .subtitle {
+            display: flex;
         }
     }
 `;

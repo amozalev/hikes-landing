@@ -21,13 +21,26 @@ const PopularHikesSection = ({ hikes, tinySliderSettings }: Props) => {
                 />
                 <TinySlider settings={tinySliderSettings}>
                     {hikes.map(
-                        ({ rating, image, imageWebp, title, price }, index) => (
+                        (
+                            {
+                                rating,
+                                image,
+                                imageWebp,
+                                title,
+                                subTitle,
+                                description,
+                                price,
+                            },
+                            index,
+                        ) => (
                             <HikeCard
                                 key={index}
                                 rating={rating}
                                 image={image}
                                 imageWebp={imageWebp}
                                 title={title}
+                                subTitle={subTitle}
+                                description={description}
                                 price={price}
                             />
                         ),

@@ -44,6 +44,8 @@ export const HIKES: Hike[] = [
         image: lakeImage,
         imageWebp: lakeWebp,
         title: 'Озеро возле гор',
+        subTitle: 'романтическое приключение',
+        description: '',
         price: '480$',
     },
     {
@@ -51,6 +53,8 @@ export const HIKES: Hike[] = [
         image: mountainsNight,
         imageWebp: mountainsNightWebp,
         title: 'Ночь в горах',
+        subTitle: 'в компании друзей',
+        description: '',
         price: '500$',
     },
     {
@@ -58,6 +62,8 @@ export const HIKES: Hike[] = [
         image: mountainsJoga,
         imageWebp: mountainsJogaWebp,
         title: 'Йога в горах',
+        subTitle: 'для тех, кто забоится о себе',
+        description: '',
         price: '270$',
     },
 ];
