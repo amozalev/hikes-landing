@@ -14,10 +14,6 @@ module.exports = (env, argv) =>
             publicPath: '/',
             clean: true,
             assetModuleFilename: path.join('images', '[name][ext]'),
-            module: true,
-        },
-        experiments: {
-            outputModule: true,
         },
         // devtool: 'source-map',
         optimization: {
