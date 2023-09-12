@@ -1,35 +1,57 @@
 import styled from 'styled-components';
+import { commonTextStyles, TextProps } from '../Text/TextStyles';
 
 export const StyledHikeCard = styled.div`
     .card {
         position: relative;
         width: 285px;
         height: 400px;
-        border-radius: 24px;
     }
 
-    img {
+    .img {
         position: absolute;
-
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 24px;
     }
 
-    .hike-card__footer {
+    .content {
         width: 100%;
-        padding: 20px 24px;
+        padding: 20px 24px 25px;
         border-radius: 0 0 24px 24px;
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(3px);
 
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
         gap: 24px;
         position: absolute;
-        bottom: 0;
+        top: 330px;
+        transition: transform 350ms linear;
+    }
+
+    .content-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .description-wrapper {
+        margin-top: 38px;
+        display: none;
+    }
+
+    .description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        margin-bottom: auto;
+    }
+
+    .button-wrapper {
+        display: none;
     }
 
     .titles {
@@ -41,12 +63,11 @@ export const StyledHikeCard = styled.div`
         display: none;
     }
 
-    .hike-card__price {
+    .price {
         display: flex;
         padding: 6px 12px;
         justify-content: center;
         align-items: center;
-
         border-radius: 4px;
         background: rgba(255, 255, 255, 0.3);
     }
@@ -55,11 +76,70 @@ export const StyledHikeCard = styled.div`
         .card {
             width: 380px;
             height: 500px;
+
+            &:hover {
+                .rating {
+                    opacity: 0;
+                }
+
+                .content {
+                    height: 100%;
+                    transform: translateY(-410px);
+
+                    .description-wrapper {
+                        display: flex;
+                        flex-grow: 1;
+                    }
+
+                    .button-wrapper {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .content {
+            border-radius: 0 0 32px 32px;
+        }
+
+        .img {
             border-radius: 32px;
+        }
+
+        .content {
+            top: 410px;
         }
 
         .subtitle {
             display: flex;
         }
+
+        .price {
+            padding: 8px 16px;
+        }
+    }
+`;
+
+export const CardTitle = styled.h3<TextProps>`
+    ${commonTextStyles};
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+
+    @media (min-width: 1180px) {
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+`;
+
+export const CardPrice = styled.p<TextProps>`
+    ${commonTextStyles};
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+
+    @media (min-width: 1180px) {
+        font-size: 20px;
+        line-height: 24px;
     }
 `;

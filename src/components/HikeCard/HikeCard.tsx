@@ -3,6 +3,7 @@ import * as S from './HikeCard.Styled';
 import * as T from './../Text/TextStyles';
 import Rating from '../Rating/Rating';
 import Image, { ImageType } from '../Image/Image';
+import { Button } from '../Button/Button';
 
 export type Hike = {
     rating: number;
@@ -25,26 +26,55 @@ const HikeCard = memo(
         return (
             <S.StyledHikeCard>
                 <div className="card">
-                    <Rating rating={rating} top={36.8} right={0} zIndex={10} />
+                    <div className="rating">
+                        <Rating
+                            rating={rating}
+                            top={36.8}
+                            right={0}
+                            zIndex={10}
+                        />
+                    </div>
                     <Image
-                        className="hike-card__image"
+                        className="img"
                         imageWebp={imageWebp}
                         image={image}
                         alt={title}
                     />
-                    <div className="hike-card__footer">
-                        <div className="titles">
-                            <T.Title4 color="#FDFDFD">{title}</T.Title4>
-                            <T.Text3
-                                className="subtitle"
-                                color="#FDFDFD"
-                                weight={400}
-                            >
-                                {subTitle}
-                            </T.Text3>
+                    <div className="content">
+                        <div className="content-header">
+                            <div className="titles">
+                                <S.CardTitle color="#FDFDFD">
+                                    {title}
+                                </S.CardTitle>
+                                <T.Text3
+                                    className="subtitle"
+                                    color="#FDFDFD"
+                                    weight={400}
+                                >
+                                    {subTitle}
+                                </T.Text3>
+                            </div>
+                            <div className="price">
+                                <S.CardPrice color="#FDFDFD">
+                                    {price}
+                                </S.CardPrice>
+                            </div>
                         </div>
-                        <div className="hike-card__price">
-                            <T.Text1 color="#FDFDFD">{price}</T.Text1>
+                        <div className="description-wrapper">
+                            <T.Text1
+                                className="description"
+                                color="#FDFDFD"
+                                lineHeight={24}
+                            >
+                                {description}
+                            </T.Text1>
+                        </div>
+                        <div className="button-wrapper">
+                            <Button
+                                title="Программа тура"
+                                color="#FDFDFD"
+                                backgroundColor="#1A3E3E"
+                            />
                         </div>
                     </div>
                 </div>
