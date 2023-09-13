@@ -3,17 +3,19 @@ import * as S from './Select.Styled';
 type Props = {
     title: string;
     description?: string;
-    icon?: React.ReactNode;
 };
 
-//TODO this is a mock of select
-const Select = ({ title, description, icon }: Props) => {
+const Select = ({ title, description }: Props) => {
     return (
         <S.SelectStyled>
-            <div className="select">
-                <div className="text-field">{title}</div>
-                {icon}
-            </div>
+            <select className="select">
+                <option selected value="0">
+                    {title}
+                </option>
+                <option value="1">Горы</option>
+                <option value="2">Озеро среди гор</option>
+                <option value="3">Звёздное небо</option>
+            </select>
             <div className="description">{description}</div>
         </S.SelectStyled>
     );
