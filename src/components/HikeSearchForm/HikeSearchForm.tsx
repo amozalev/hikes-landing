@@ -2,7 +2,7 @@ import * as S from './HikeSearchForm.Styled';
 import Select from '../Select/Select';
 import { Button } from '../Button/Button';
 import { CalendarIcon } from '../Icons/CalendarIcon';
-import IconedInput from '../IconedInput/IconedInput';
+import DateInput from '../IconedInput/DateInput';
 
 type Props = {
     className?: string;
@@ -12,7 +12,7 @@ const HikeSearchForm = ({ className }: Props) => {
     return (
         <S.HikeSearchFormStyled className={className}>
             <Select title="Локации для тура" description="выберите из списка" />
-            <IconedInput
+            <DateInput
                 title="Дата похода"
                 description="укажите диапазон"
                 icon={<CalendarIcon />}

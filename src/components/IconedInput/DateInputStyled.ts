@@ -1,27 +1,30 @@
 import styled from 'styled-components';
+import CalendarIcon from '../../assets/icons/CalendarIcon.svg';
 
-export const IconedInputStyled = styled.div`
+export const DateInputStyled = styled.label`
     display: flex;
     flex-direction: column;
     gap: 8px;
 
+    color: #fdfdfd;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+
     .input {
+        min-width: 210px;
+        background: transparent;
+
         display: flex;
         align-items: center;
         gap: 8px;
         padding: 14px 16px;
         border-radius: 8px;
         border: 1px solid #e1e3e4;
-    }
+        background: url(${CalendarIcon.replace('\\', '/')}) no-repeat right
+            0.8em center;
 
-    .text-field {
-        min-width: 210px;
-        background: transparent;
-        border: none;
-    }
-
-    .input::placeholder,
-    .text-field {
         color: #fdfdfd;
         font-size: 16px;
         font-style: normal;
@@ -29,12 +32,7 @@ export const IconedInputStyled = styled.div`
         line-height: 24px;
     }
 
-    .description {
+    .label {
         padding: 0 8px;
-        color: #fdfdfd;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 21px;
     }
 `;
