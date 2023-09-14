@@ -22,5 +22,6 @@ export const StyledButton = styled.button<Props>`
 
     &:hover {
         background: #f2be22;
+        cursor: pointer;
     }
 `;

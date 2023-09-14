@@ -14,6 +14,7 @@ export const SelectStyled = styled.label`
         padding: 14px 16px;
         border-radius: 8px;
         border: 1px solid #e1e3e4;
+        cursor: pointer;
 
         appearance: none;
 

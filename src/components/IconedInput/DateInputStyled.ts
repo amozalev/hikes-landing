@@ -16,6 +16,7 @@ export const DateInputStyled = styled.label`
     .input {
         min-width: 210px;
         background: transparent;
+        cursor: pointer;
 
         display: flex;
         align-items: center;
