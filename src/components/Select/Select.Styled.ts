@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import bottomArrowIcon from '../../assets/icons/BottomArrowIcon.svg';
 
-export const SelectStyled = styled.div`
+export const SelectStyled = styled.label`
     display: flex;
     flex-direction: column;
     gap: 8px;
+    min-width: 270px;
 
     .select {
         display: flex;
@@ -16,7 +17,6 @@ export const SelectStyled = styled.div`
 
         appearance: none;
 
-        min-width: 210px;
         color: #fdfdfd;
         font-size: 16px;
         font-style: normal;

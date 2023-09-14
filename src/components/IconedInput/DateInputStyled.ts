@@ -5,6 +5,7 @@ export const DateInputStyled = styled.label`
     display: flex;
     flex-direction: column;
     gap: 8px;
+    min-width: 270px;
 
     color: #fdfdfd;
     font-size: 14px;
