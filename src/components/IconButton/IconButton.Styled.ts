@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
-export const StyledIconButton = styled.button`
+type Props = {
+    color?: string;
+    hoverColor?: string;
+};
+
+export const StyledIconButton = styled.button<Props>`
     background: none;
     border: none;
+    color: ${({ color }) => color || '#fff'};
 
     :hover {
-        opacity: 0.7;
+        cursor: pointer;
+        color: ${({ hoverColor }) => hoverColor || '#F2BE22'};
     }
 `;

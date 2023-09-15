@@ -7,6 +7,7 @@ import { PinterestIcon } from '../../Icons/PinterestIcon';
 import { SkypeIcon } from '../../Icons/SkypeIcon';
 import Navigation from '../../Navigation/Navigation';
 import { FOOTER_LINKS1, FOOTER_LINKS2 } from '../../../constants';
+import IconButton from '../../IconButton/IconButton';
 
 const FooterSection = () => {
     return (
@@ -32,10 +33,26 @@ const FooterSection = () => {
                             </T.StyledLink>
                         </div>
                         <div className="social-networks">
-                            <TelegramIcon />
-                            <VkIcon />
-                            <PinterestIcon />
-                            <SkypeIcon />
+                            <IconButton
+                                icon={TelegramIcon}
+                                onClick={() => null}
+                                ariaLabel="Telegram"
+                            />
+                            <IconButton
+                                icon={VkIcon}
+                                onClick={() => null}
+                                ariaLabel="VK"
+                            />
+                            <IconButton
+                                icon={PinterestIcon}
+                                onClick={() => null}
+                                ariaLabel="Pinterest"
+                            />
+                            <IconButton
+                                icon={SkypeIcon}
+                                onClick={() => null}
+                                ariaLabel="Skype"
+                            />
                         </div>
                     </div>
                     <div className="section nav-wrapper">

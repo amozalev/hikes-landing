@@ -8,6 +8,7 @@ export interface TextProps {
     fontSize?: number;
     weight?: FontWeight;
     color?: string;
+    hoverColor?: string;
     underline?: boolean;
     lineHeight?: number;
     marginTop?: number;
@@ -70,6 +71,11 @@ export const StyledLink = styled(Link)<TextProps>`
         `
     text-decoration-color: ${color};
     `};
+
+    &:hover {
+        color: ${({ hoverColor }) => hoverColor || '#F2BE22'};
+        text-decoration-color: ${({ hoverColor }) => hoverColor || '#F2BE22'};
+    }
 `;
 
 export const Title2 = styled(Text)<TextProps>`
