@@ -1,5 +1,5 @@
-# Hikes adaptive landing page
-React + webpack5 + styled components based landing page. Optimised WEBP images are generated at a development start and production build processes.
+# Hikes landing page
+React + webpack5 + styled components based landing page with adaptive layout. Optimised WEBP images are generated at a development start and production build processes.
 
 ## App start
 - Development build:
